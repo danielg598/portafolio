@@ -23,7 +23,7 @@ body{
 .header{
     height: 100vh;
     /* 02 */
-    background-image: linear-gradient(to top, rgba(251, 194, 235, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(img/woman.jpg);
+    background-image: linear-gradient(to top, rgba(251, 194, 235, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(imagenes/desarrollo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -85,13 +85,16 @@ body{
 
 
 .titulo{
-    font-size: 60px;
+    font-size: 80px;
+    font-weight: bold;
     margin-bottom: 15px;
+    color: rgb(4, 3, 2);
 }
 
 .copy{
-    font-weight: 300;
+    font-weight: 700;
     font-size: 25px;
+    color: rgb(4, 3, 2);
 }
 
 /* Services */
@@ -106,20 +109,28 @@ body{
 
 .contenedor-servicio{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content:center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.contenedor-servicio img{
-    width: 40%;
+.contenedor-servicio p{
+    width: 80%;
+    margin-bottom: 100px;
+    text-align: justify;
 }
 
 .checklist-servicio{
-    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .service{
+    width: 80%;
     margin-bottom: 20px;
 }
 
@@ -141,6 +152,8 @@ body{
     color: #fff;
     font-weight: 700;
 }
+
+/* galeria */
 
 .gallery{
     background: #f2f2f2;
@@ -226,7 +239,7 @@ body{
 }
 
 footer{
-    background: #9f8ad0;
+    background: #484749;
     padding-bottom: 0.1px;
 }
 
@@ -248,8 +261,8 @@ footer{
 .brand{
     font-weight: 500;
     font-size: 40px;
+    margin-bottom: 40px;
 }
-
 .brand+p{
     font-weight: 500;
 }

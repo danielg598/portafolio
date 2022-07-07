@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página web</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Quicksand:wght@300;500;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-</head>
+</head> 
 <body>
     
     <header class="header" id="inicio">
@@ -19,56 +22,67 @@
                 <a href="#expertos">Especializados</a>
                 <a href="#footer">Contacto</a>
         </nav>
-        <div class="contenedor head">
-            <h1 class="titulo">Convertimos tus ideas en una realidad</h1>
-            <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
+        <!-- <div class="contenedor head">
+            <h1 class="titulo">Portafolio Web</h1>
+            <p class="copy">Daniel Gonzalo Alzate Restrepo</p>
+        </div> -->
         
     </header>
     <main>
         <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro servicio</h2>
+            <h2 class="subtitulo">Sobre mi</h2>
             <div class="contenedor-servicio">
-                <img src="img/checklist.svg" alt="">
-                <div class="checklist-servicio">
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">3</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
+                <p>
+                    Soy una persona emprendedora, he tenido que trabajar en muchas cosas diferentes como mensajero, vigilante, en construcción y como taxista en plataformas digitales, todos estos trabajos me motivaron a buscar mi sueño el cual era estudiar desarrollo de software, empecé muy tarde por que no había tenido la oportunidad, pero siempre con la meta de algún día ser un desarrollador y tener un trabajo el cual ame y disfrute al máximo. Este seria una parte de mi felicidad. Que mas puedo decir sobre mí, soy una persona honesta, leal, y siempre en busca de la excelencia como persona y profesional.
+                </p>
+                <!-- <img src="img/checklist.svg" alt=""> -->
+                
+            </div>
+            <h2 class="subtitulo">Experiencia y conocimientos</h2>
+            <div class="checklist-servicio">
+                <div class="service">
+                    <h3 class="n-service">Front-end</h3>
+                    <p>Tengo conocimientos prácticos y teóricos en creación del Front de páginas web, utilizando Framework como Bootstrap, Pure, Foundation y Tailwindcss.
+                        Creación de páginas responsive y validación de login o formularios, utilizando JavaScript y también con validación de framework.
+                        </p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">Html</h3>
+                    <p>Arquitectura de html:5, manejo del cuerpo básico para el óptimo funcionamiento de una página web, manejo de las diferentes etiquetas en html, su importancia en el SEO.</p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">CSS</h3>
+                    <p>Manejo adecuado de css, para dar estilos a una web. Correcta utilización de flexbox y grid para acomodar correctamente elementos y distribuirlos de acuerdo a lo que se requiera.</p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">Diseño responsive</h3>
+                    <p>Diseño responsive centrado en el entorno del usuario, para los dispositivos móviles más comunes, correcta utilización de media queries en css en min-width y max-width para un acertado emparejamiento en cualquier dispositivo móvil.</p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">Diseño grafico </h3>
+                    <p>Tengo experiencia en creación de logos, arquitectura de logos, tratamiento de imágenes. Manejo de diferentes programas de diseño como illustrator, Photoshop, InDesign, premiere pro. 
+                        Creación de volantes y diferentes piezas graficas digitales, ilustración simple y tratamiento del color.
+                        </p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">Git & GitHub </h3>
+                    <p>Manejo de código en git para crear, clonar y modificar repositorios en la plataforma de github. </p>
+                </div>
+                <div class="service">
+                    <h3 class="n-service">Bases de datos</h3>
+                    <p>Manejo de bases de datos en SQL server y MySQL, consultas, manipulación de datos y manipulación de bases de datos, manejo de usuarios, sentencias, desencadenantes, funciones, seguridad y documentación.</p>
                 </div>
             </div>
         </section>
-        <section class="gallery" id="galeria">
-            <div class="contenedor">
-                <h2 class="subtitulo">Galeria</h2>
-                <div class="contenedor-galeria">
-                    <img src="img/uno.jpg" class="img-galeria" alt="Hola">
-                    <img src="img/dos.jpg" class="img-galeria" alt="">
-                    <img src="img/tres.jpg" class="img-galeria" alt="">
-                    <img src="img/cuatro.jpg" class="img-galeria" alt="">
-                    <img src="img/cinco.jpg" class="img-galeria" alt="">
-                    <img src="img/seis.jpg" class="img-galeria" alt="">
-                </div>
-            </div>
-        </section>
-        <div class="imagen-light">
-            <img src="img/close.svg" alt="" class="close">
-            <img src="" alt="" class="agregar-imagen">
-        </div>
+        
         <section class="contenedor" id="expertos">
             <h2 class="subtitulo">Expertos en:</h2>
             <section class="experts">
                 <div class="cont-expert">
-                    <img src="img/pie_chart.svg" alt="">
-                    <h3 class="n-expert">Analytics</h3>
+                    <a href="js.html" target="_blank">
+                        <img src="img/pie_chart.svg" alt="">
+                        <h3 class="n-expert">Analytics</h3>
+                    </a>
                 </div>
                 <div class="cont-expert">
                     <img src="img/search_engine.svg" alt="">
@@ -85,15 +99,16 @@
     <footer id="footer">
         <div class="contenedor footer-content">
                 <div class="contact-us">
-                    <h2 class="brand">AlexCG Design</h2>
-                    <p>Somos expertos en la creación de tus sueños</p>
+                    <h2 class="brand">Daniel Gonzalo Alzate Restrepo</h2>
+                    <p>Desarrollo Frontend - Desarrollo de software</p>
+                    <p>Diseño Gráfico</p>
                 </div>
                 <div class="social-media">
-                    <a href="./" class="social-media-icon">
-                        <i class='bx bxl-facebook'></i>
+                    <a href="https://wa.me/573507890560" target="_blank" class="social-media-icon">
+                        <i class='bx bxl-whatsapp'></i>
                     </a>
                     <a href="./" class="social-media-icon">
-                        <i class='bx bxl-twitter' ></i>
+                        <i class='bx bxl-linkedin' ></i>
                     </a>
                     <a href="./" class="social-media-icon">
                         <i class='bx bxl-instagram' ></i>
