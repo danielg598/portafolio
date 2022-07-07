@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E34F26;}
+	.st1{fill:#EF652A;}
+	.st2{fill:#EBEBEB;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#264DE4;}
+	.st5{fill:#2965F1;}
+	.st6{fill:none;stroke:#000000;stroke-width:30;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M133.68,717.63l-30.53-342.56H439l-30.53,342.56L270.7,756.36"/>
+	<path class="st1" d="M271.44,726.57l110.96-30.53l26.06-293.41H271.44"/>
+	<path class="st2" d="M271.44,529.97h-55.85l-3.72-43.19h59.58v-41.7h-0.74h-105l0.74,11.17l10.43,116.17h94.58V529.97z
+		 M271.44,639.44h-0.74l-46.92-12.66l-2.98-33.51h-22.34H179.1l5.21,66.28l86.38,23.83h0.74V639.44z"/>
+	<path class="st3" d="M270.7,529.97v42.45h52.13l-5.21,54.36l-46.92,12.66v43.94l86.38-23.83l0.74-7.45l9.68-110.96l1.49-11.17
+		h-11.92H270.7z M270.7,445.07v26.06v15.64l0,0h102.02l0,0l0,0l0.74-8.94l2.23-21.6l0.74-11.17H270.7z"/>
+</g>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" id="base" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(-193.633,-276.3622)">
+	<g id="g3013" transform="translate(119,276.3622)">
+		<polygon id="polygon2989" class="st4" points="950.72,419.76 923.07,729.54 798.76,764 674.81,729.59 647.18,419.76 		"/>
+		<polygon id="polygon2991" class="st5" points="899.39,709.81 923.02,445.09 798.95,445.09 798.95,737.66 		"/>
+		<polygon id="polygon2993" class="st2" points="710.51,560 713.91,598 798.95,598 798.95,560 		"/>
+		<polygon id="polygon2995" class="st2" points="798.95,483.09 798.82,483.09 703.67,483.09 707.12,521.09 798.95,521.09 		"/>
+		<polygon id="polygon2997" class="st2" points="798.95,698.23 798.95,658.69 798.78,658.74 756.46,647.31 753.76,617 733.19,617 
+			715.61,617 720.94,676.67 798.78,698.28 		"/>
+		<path id="path2999" d="M718.62,335.56h46.02v19.25h-26.78v19.25h26.78v19.25h-46.02V335.56z"/>
+		<path id="path3001" d="M773.85,335.56h46.02v16.74h-26.78v3.35h26.78v38.49h-46.02v-17.57h26.78v-3.35h-26.78V335.56z"/>
+		<path id="path3003" d="M829.08,335.56h46.02v16.74h-26.78v3.35h26.78v38.49h-46.02v-17.57h26.78v-3.35h-26.78V335.56z"/>
+		<polygon id="polygon3005" class="st3" points="845.61,598 841.2,647.28 798.82,658.72 798.82,698.26 876.72,676.67 877.29,670.25 
+			886.22,570.21 887.15,560 894.01,483.09 798.82,483.09 798.82,521.09 852.36,521.09 848.91,560 798.82,560 798.82,598 		"/>
+	</g>
+</g>
+<line class="st6" x1="424" y1="838" x2="554" y2="270"/>
+</svg>
