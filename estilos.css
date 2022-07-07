@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Quicksand:wght@300;500;700&family=Roboto:wght@300;400;700;900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 :root{
     scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contenedor{
@@ -23,7 +25,7 @@ body{
 .header{
     height: 100vh;
     /* 02 */
-    background-image: linear-gradient(to top, rgba(251, 194, 235, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(imagenes/desarrollo.jpg);
+    background-image: linear-gradient(to top, rgba(222, 202, 217, 0.297) 0%, hsla(218, 34%, 49%, 0.514) 100%), url(imagenes/desarrollo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,8 +37,8 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content:left;
+    text-align: left;
     color: #fff;
 }
 
@@ -60,9 +62,9 @@ body{
     height: 100%;
     /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c0ee 100%); */
     /* 02 */
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient(to top, #d4d4d4 0%, #ffffff 100%);
     /* 028 */
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: linear-gradient(135deg, #aaaaaa 0%, #ffffff 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -78,17 +80,23 @@ body{
 }
 
 .menu-navegacion a{
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
 }
 
 
 
 .titulo{
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
-    margin-bottom: 15px;
-    color: rgb(4, 3, 2);
+    margin-bottom: 25px;
+    color: rgb(210, 205, 200);
+}
+
+.titulo:nth-child(1){
+    margin-top: 125px;
 }
 
 .copy{
@@ -100,7 +108,7 @@ body{
 /* Services */
 
 .subtitulo{
-    color: #9f8ad0;
+    color: #7d4506;
     font-size: 40px;
     text-align: center;
     font-weight: 300;
@@ -138,7 +146,7 @@ body{
 
 .n-service{
     margin-bottom: 7px;
-    color: #9f8ad0;
+    color: #000000;
 }
 
 .number{
