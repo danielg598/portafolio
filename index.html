@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        
+        header{
+            width: 100vw;
+        }
+        .carousel-item{
+          width: 100%;
+          height: 600px;
+          
+        }
+        .carousel-item img{
+          width: 100%;
+          height: 100%;
+          /* object-fit: contain; */
+
+        }
+        .container{
+          display: grid;
+          grid-template-rows: auto;
+        }
+        .container h1{
+          margin-top: 65px;
+        }
+        .container h1:nth-child(2){
+          margin-bottom: 65px;
+        }
+        .experiencia{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          row-gap: 30px;
+        }
+        @media screen and (min-width: 270px) and (max-width: 1279px){
+          .carousel-item img{
+            object-fit: contain;
+          }
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Daniel Alzate</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Diseño Grafico</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Desarrollo Web</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Cursos y diplomados</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/desarrollo.jpg" class="d-block w-100" alt="desarrollo">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/diseño-grafico.jpg" class="d-block w-100" alt="diseño grafico">
+                      
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/maquetacion.jpg" class="d-block w-100" alt="maquetacion"> 
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/programacion.jpg" class="d-block w-100" alt="programacion"> 
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+          </div>
+
+    </header>
+    <main>
+      <section class="container">
+        <h1>Sobre mí</h1>
+        <div>
+          <p>
+            Soy una persona emprendedora, he tenido que trabajar en muchas cosas diferentes como mensajero, vigilante, en construcción y como taxista en plataformas digitales, todos estos trabajos me motivaron a buscar mi sueño el cual era estudiar desarrollo de software, empecé muy tarde por que no había tenido la oportunidad, pero siempre con la meta de algún día ser un desarrollador y tener un trabajo el cual ame y disfrute al máximo. Este seria una parte de mi felicidad. Que mas puedo decir sobre mí, soy una persona honesta, leal, y siempre en busca de la excelencia como persona y profesional.
+          </p>
+        </div>
+        <section class="experiencia">
+          <h1>Experiencia y conocimientos</h1>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/front.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Front-end</h5>
+              <p class="card-text">Tengo conocimientos prácticos y teóricos en creación del Front de páginas web, utilizando Framework como Bootstrap, Pure, Foundation y Tailwindcss.
+                Creación de páginas responsive y validación de login o formularios, utilizando JavaScript y también con validación de framework.
+                </p>
+              <a href="#" class="btn btn-primary">Ejemplos de Front-end</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/html.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HTML:5</h5>
+              <p class="card-text">Arquitectura de html:5, manejo del cuerpo básico para el óptimo funcionamiento de una página web, manejo de las diferentes etiquetas en html, su importancia en el SEO.</p>
+              <a href="#" class="btn btn-primary">Todo sobre HTML</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/css.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">Manejo adecuado de css, para dar estilos a una web. Correcta utilización de flexbox y grid para acomodar correctamente elementos y distribuirlos de acuerdo a lo que se requiera.</p>
+              <a href="#" class="btn btn-primary">ejercicios practicos y ejemplos</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/responsive.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Diseño responsive</h5>
+              <p class="card-text">Diseño responsive centrado en el entorno del usuario, para los dispositivos móviles más comunes, correcta utilización de media queries en css en min-width y max-width para un acertado emparejamiento en cualquier dispositivo móvil.</p>
+              <a href="#" class="btn btn-primary">ejemplos de responsive</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/github.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Git & GitHub</h5>
+              <p class="card-text">Manejo de código en git para crear, clonar y modificar repositorios en la plataforma de github. </p>
+              <a href="#" class="btn btn-primary">trabajos en repositorio</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/img/bases-datos.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bases de datos</h5>
+              <p class="card-text">Manejo de bases de datos en SQL server y MySQL, consultas, manipulación de datos y manipulación de bases de datos, manejo de usuarios, sentencias, desencadenantes, funciones, seguridad y documentación.</p>
+              <a href="#" class="btn btn-primary">ejemplos y trabajos en bases de datos</a>
+            </div>
+          </div>
+        </section>
+        
+      </section>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
