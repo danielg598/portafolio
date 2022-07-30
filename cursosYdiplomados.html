@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursosYdiplomados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        header{
+            width: 100vw;
+        }
+        .carousel-item{
+          width: 100%;
+          height: 600px;
+          
+        }
+        .carousel-item img{
+          width: 100%;
+          height: 100%;
+          /* object-fit: contain; */
+
+        }
+        .container{
+            display: grid;
+            grid-template-rows: auto;
+            margin-top: 100px;
+        }
+        .cursos{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr ;
+          row-gap: 60px;
+          margin-top: 100px;
+        }
+        @media screen and (min-width: 270px) and (max-width: 1279px){
+          .carousel-item img{
+            object-fit: contain;
+          }
+        }
+        @media screen and (min-width: 270px) and (max-width: 800px){
+            .cursos{
+            display: flex;
+            flex-direction: column;
+            
+          }
+        }
+        @media screen and (min-width: 910px) and (max-width: 1024px){
+            .cursos{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Daniel Alzate</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Diseño Grafico</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Desarrollo Web</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="cursosYdiplomados.html">Cursos y diplomados</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/desarrollo.jpg" class="d-block w-100" alt="desarrollo">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="img/grafico.jpg" class="d-block w-100" alt="diseño grafico">
+                  
+                </div>
+                <div class="carousel-item">
+                    <img src="img/maquetacion.jpg" class="d-block w-100" alt="maquetacion"> 
+                </div>
+                <div class="carousel-item">
+                  <img src="img/programacion.jpg" class="d-block w-100" alt="programacion"> 
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h1>Misión tic 2022</h1>
+            <div>
+                <p>Este fue un diplomado creado por el gobierno, empezó a darse en el año 2021, el cual fue el que tome yo y el ultimo se dicto en 2022. Es un diplomado en el cual nos forman como programadores juniores enfocados en web y móvil. En web nos forman en el manejo básico de una web, introducción a JPA y spring data, servicios web REST sobre sprint boot. En móvil nos enseñaron un manejo básico de Android studio.
+                    Este diplomado fue dictado por la UNAB, tuvo una intensidad de 800 horas repartidas en 4 ciclos.
+                    </p>
+            </div>
+            <section class="cursos">
+            <h1 style="width: 18rem;">Diplomas obtenidos en mintic 2022</h1>
+            <div class="card" style="width: 18rem;">
+            <img src="img/ciclo1.png" class="card-img-top" alt="front">
+            <div class="card-body">
+              <h5 class="card-title">Ciclo 1</h5>
+              <p class="card-text">En el ciclo uno aprendemos programación básica orientada a objetos, trabajamos esta programación básica en Python, trabajamos teoría básica de como declarar variables, sentencias condicionales, ciclos y funciones.</p>
+              <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+            </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img/ciclo2.png" class="card-img-top" alt="front">
+                <div class="card-body">
+                  <h5 class="card-title">Ciclo 2</h5>
+                  <p class="card-text">En el ciclo dos seguimos con el trabajo de programación orientada a objetos, pero trabajando un lenguaje diferente el cual es java, con una serie de ejercicios y ya trabajando clases, herencia y polimorfismo.</p>
+                  <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img/ciclo3.png" class="card-img-top" alt="front">
+                <div class="card-body">
+                  <h5 class="card-title">Ciclo 3</h5>
+                  <p class="card-text">En el ciclo tres nos enfocamos en web y trabajar con la metodología scrum con un grupo de 5 personas, yo fui designado como srum master, el cual definía roles en el equipo designaba tareas y tiempos para estas tareas asignadas a los compañeros. Vimos manejos de html y todos sus componentes, css y todos sus componentes y conocimos JavaScript básico. Todo esto para finalizar con un entregable de un boceto de una pagina web. </p>
+                  <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img/ciclo4.png" class="card-img-top" alt="front">
+                <div class="card-body">
+                  <h5 class="card-title">Ciclo 4</h5>
+                  <p class="card-text">En el ciclo cuatro trabajamos en desarrollo móvil, esto se realiza en Android studio, acá en este ciclo desarrollamos aplicaciones móviles básicas, como se crea lo visual y diferentes clases en móvil para un funcionamiento acertado de las diferentes aplicaciones. </p>
+                  <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="img/diplomamintic.png" class="card-img-top" alt="front">
+                <div class="card-body">
+                  <h5 class="card-title">Diploma obtenido</h5>
+                  <p class="card-text">Este proceso tuvo una duración de 800 horas, las cuales aproveche al máximo, pero nos mintieron con la promesa que nos iban a emplear y nos iban a dar la oportunidad en grandes empresas de adquirir la experiencia en nuestras áreas. Experiencia que tanto anhelamos y tan difícil que nos brinden esta oportunidad.</p>
+                  <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                </div>
+            </div>
+            </section>
+        </section>
+        <section class="container">
+            <h1 style="margin-top: 100px;">Desarrollo front end “sapiencia” </h1>
+            <div>
+                <p>Este diplomado es dictado por el poli andino con alianza con sapiencia, en este curso vimos y trabajamos directamente con html, css y javascript para crear un proyecto funcional para un hotel ubicado en Urabá. Por motivos legales no puedo mostrar el contenido realizado ni el nombre de este hotel. El curso fue dictado primero que todo teórico y finalizamos con la practica que fue generar esta pagina web para este hotel, con un mínimo de 5 subpáginas con el contenido de precios y servicios ofrecidos.</p>
+            </div>
+
+            <section class="cursos">
+                <h1 style="width: 18rem;">Diplomas obtenidos en desarrollo front end “sapiencia”</h1>
+                
+                <div class="card" style="width: 18rem;">
+                <img src="img/poliandinoFrontEndTeorico.png" class="card-img-top" alt="front">
+                <div class="card-body">
+                <h5 class="card-title">Ciclo 1 - front end teorico</h5>
+                <p class="card-text">En este ciclo conocimos sobre etiquetas HTML, importancia de estas etiquetas en el SEO y diferente manejo de estas por medio de frameworks, también manejo básico de css, display, tamaños, manejo de hijos y un poco de animaciones.</p>
+                <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poliandinoIngles.png" class="card-img-top" alt="front">
+                    <div class="card-body">
+                    <h5 class="card-title">Ciclo 2 - ingles</h5>
+                    <p class="card-text">En este ciclo nos enfocamos en ingles enfocado al desarrollo web. </p>
+                    <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poliandinoFrontendPractico.png" class="card-img-top" alt="front">
+                    <div class="card-body">
+                    <h5 class="card-title">Ciclo 3 - front end practico</h5>
+                    <p class="card-text">En este ciclo creamos una pagina web con los conocimientos adquiridos y entregamos un trabajo final de una pagina web de un hotel.</p>
+                    <!-- <a href="#" class="btn btn-primary">Ejemplos de Front-end</a> -->
+                    </div>
+                </div>
+
+                
+            </section>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
