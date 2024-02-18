@@ -1,1 +1,17 @@
-<p>perfil works!</p>
+<main>
+    <div class="contendor-principal">
+        <div class="info-perfil">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad explicabo tempore architecto nam tempora, voluptatibus corrupti, minima fuga debitis, enim natus ipsa quia ducimus nostrum illo officia obcaecati magni neque!
+
+            <button (click)="prueba()">Cambiar Contenido en Hijo</button>
+        </div>
+        <div class="descripcion">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus temporibus dignissimos quas labore excepturi rerum quo vitae officiis voluptatem deleniti assumenda et laudantium ipsum quidem voluptatum esse non, minus quibusdam!
+        </div>
+    </div>
+    
+    
+    <ng-template cdk-portal #modalAcuerdosNoPagados="cdkPortal">
+        <app-experiencia></app-experiencia>
+    </ng-template>
+</main>
