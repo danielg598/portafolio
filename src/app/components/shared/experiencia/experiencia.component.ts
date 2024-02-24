@@ -1,5 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { ModalOverlayService } from '../../../services/modal.service';
+import { Component} from '@angular/core';
 import { PerfilComponent } from '../perfil/perfil.component';
 
 @Component({
@@ -11,12 +10,7 @@ import { PerfilComponent } from '../perfil/perfil.component';
 })
 export class ExperienciaComponent {
 
-  constructor(private modal:ModalOverlayService){}
-@ViewChild('experiencia', {static:true}) experiencia!: ElementRef;
-
-closeModal(){
-  this.modal.closeOverlay();
-}
+  constructor(){}
 
 
 

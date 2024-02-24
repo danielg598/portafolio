@@ -1,19 +1,33 @@
-.contendor-principal{
+.container_principal{
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 100% 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(3,minmax(0, 1fr));
     gap: 10px;
+    grid-template-areas: "container1 container1 container1 container1 container1 container1" 
+    "container1 container1 container1 container1 container1 container1"
+    "container2 container2 container3 container3 container3 container3";
 }
-.info-perfil{
-    display: flex;
-    flex-direction: column;
+.container1{
+    display: grid;
     background-color: #fafafa;
-    color: black;
+    width: 100%;
+    grid-area: container1;
+    height: 100%;
+    margin-top: 10px;
 }
-.descripcion{
-    display: flex;
-    flex-direction: column;
+.container2{
+    display: grid;
     background-color: #fafafa;
-    color: black;
-    padding-right: 5px;
+    width: 100%;
+    grid-area: container2;
+    margin-top: 10px;
+    height: 100%;
+}
+.container3{
+    display: grid;
+    background-color: #fafafa;
+    width: 100%;
+    grid-area: container3;
+    margin-top: 10px;
+    height: 100%;
 }
