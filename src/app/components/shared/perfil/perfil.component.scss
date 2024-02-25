@@ -9,12 +9,47 @@
 }
 .container1{
     display: grid;
-    background-color: #fafafa;
+    // background-color: #fafafa;
     width: 100%;
     grid-area: container1;
     height: 100%;
-    margin-top: 10px;
+    margin-top: 35px;
 }
+.descripcion{
+    color: #fafafa;
+    font-size: 64px;
+    line-height: 1.5;
+    text-align: start;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out;
+    margin-left: 10px;
+}
+.highlight {
+    font-size: 79px;
+    font-weight: bold;
+    color: #1c1b22;
+    -webkit-text-stroke: 1px #fafafa;
+    animation: scaleText 2.5s infinite alternate;
+}
+// @keyframes fadeInUp {
+//     from {
+//       opacity: 0;
+//       transform: translateY(200px);
+//     }
+//     to {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+// }
+
+// @keyframes scaleText {
+//     from {
+//         transform: scale(1);
+//     }
+//     to {
+//         transform: scale(14.1);
+//     }
+// }
 .container2{
     display: grid;
     background-color: #fafafa;
