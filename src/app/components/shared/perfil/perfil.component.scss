@@ -1,11 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+b
 .container_principal{
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-template-rows: repeat(2,minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 10px;
     grid-template-areas: "container1 container1 container1 container1 container1 container1" 
     // "container1 container1 container1 container1 container1 container1"
-    "container2 container2 container3 container3 container3 container3";
+    "container2 container2 container2 container2 container2 container2"
+    "container3 container3 container3 container3 container3 container3";
 }
 .container1{
     display: grid;
@@ -19,10 +25,12 @@
     color: #fafafa;
     font-size: 64px;
     line-height: 1.5;
+    width: 100%;
+    text-align: left;
     text-align: start;
     letter-spacing: 1px;
     animation: fadeInUp 1s ease-out;
-    margin-left: 10px;
+    padding-left: 20px;
 }
 .highlight {
     font-size: 79px;
@@ -31,25 +39,6 @@
     -webkit-text-stroke: 1px #fafafa;
     animation: scaleText 2.5s infinite alternate;
 }
-// @keyframes fadeInUp {
-//     from {
-//       opacity: 0;
-//       transform: translateY(200px);
-//     }
-//     to {
-//       opacity: 1;
-//       transform: translateY(0);
-//     }
-// }
-
-// @keyframes scaleText {
-//     from {
-//         transform: scale(1);
-//     }
-//     to {
-//         transform: scale(14.1);
-//     }
-// }
 .container2{
     display: grid;
     background-color: #fafafa;
@@ -57,10 +46,80 @@
     grid-area: container2;
     margin-top: 10px;
     height: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-areas: "foto_portafolio contenedor_contenido_contenedor2 contenedor_contenido_contenedor2";
 }
-.container2 img{
+.foto_portafolio{
+    grid-area: foto_portafolio;
+
+}
+.foto_portafolio img{
     width: 100%;
     height: 100%;
+}
+.contenedor_contenido_contenedor2{
+    display: grid;
+    grid-area: contenedor_contenido_contenedor2;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-rows: minmax(0,15%) minmax(0,15%) minmax(0,30%) minmax(0,15%) minmax(0,25%);
+    grid-template-areas: 
+    "titulo_contenedor2 titulo_contenedor2 titulo_contenedor2 titulo_contenedor2"
+    "titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
+    "estudio1 estudio1 estudio1 estudio1"
+    "titulo_estudio2 titulo_estudio2 titulo_estudio2 titulo_estudio2"
+    "estudio2 estudio2 estudio2 estudio2";
+}
+.titulo_contenedor2{
+    display: flex;
+    justify-content: center;
+    grid-area: titulo_contenedor2;
+}
+.titulo_contenedor2 p{
+    font-family: "Permanent Marker", cursive;
+    font-size: 75px;
+    color: #1c1b22;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.titulo_estudio1{
+    grid-area: titulo_estudio1;
+}
+.titulo_estudio1 p{
+    font-family: "Anta", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #374151;
+}
+.estudio1{
+    grid-area: estudio1;
+}
+.estudio1 p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    line-height: 2;
+}
+.titulo_estudio2{
+    grid-area: titulo_estudio2;
+}
+.titulo_estudio2 p{
+    font-family: "Anta", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #374151;
+}
+.estudio2{
+    grid-area: estudio2;
+}
+.estudio2 p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    line-height: 2;
 }
 .container3{
     display: grid;
@@ -69,20 +128,54 @@
     grid-area: container3;
     margin-top: 10px;
     height: 100%;
+    background: linear-gradient(rgba(18, 18, 17, 0.8), rgba(18, 18, 17, 0.8)), url('../../../../assets/fondo1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,35%);
+    grid-template-areas: 
+    "titulo_conocimientos titulo_conocimientos titulo_conocimientos titulo_conocimientos"
+    "c_conocimientos c_conocimientos c_conocimientos c_conocimientos"
+    "angular laravel node sql"
+    "contenido_angular contenido_angular contenido_angular contenido_angular";
 }
-.contenedor_contenido_contenedor3{
-    display: grid;
-    grid-template-rows: minmax(0,25%) minmax(0,75%);
+.titulo_conocimientos{
+    grid-area: titulo_conocimientos;
 }
-.titulo_contenedor3{
+.titulo_conocimientos p{
     display: flex;
-    justify-content: center;
-}
-.titulo_contenedor3 p{
+    justify-content: flex-start;
     font-family: "Permanent Marker", cursive;
     font-size: 75px;
-    color: chocolate;
+    color: #fafafa;
     font-weight: 700;
     margin: 0;
     padding: 0;
+}
+.contenido_conocimientos{
+    grid-area: c_conocimientos;
+}
+.contenido_conocimientos p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #fafafa;
+    line-height: 2;
+}
+.angular{
+    grid-area: angular;
+}
+.laravel{
+    grid-area: laravel;
+}
+.node{
+    grid-area: node;
+}
+.sql{
+    grid-area: sql;
+}
+.contenido_angular{
+    grid-area: contenido_angular;
 }
