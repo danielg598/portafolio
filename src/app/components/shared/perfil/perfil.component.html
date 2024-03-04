@@ -22,23 +22,55 @@
     </div>
     <div class="container3">
         <div class="titulo_conocimientos"><p>Conocimientos</p></div>
-        <div class="contenido_conocimientos"><p>Esta sección destaca mis conocimientos en constante evolución y refleja mi compromiso con la actualización continua. Mi portafolio y esta área se mantendrán actualizados conforme avance en mis estudios y adquiera nuevos conceptos en tecnologías y desarrollo de software.</p></div>
-        <button class="angular"><p>Angular</p></button>
-        <button class="laravel"><p>Laravel-api</p></button>
-        <button class="node"><p>node-api</p></button>
-        <button class="sql"><p>sql</p></button>
-        <div class="contenido_angular">
-            <div>
-                <p>Comunicación de Componentes en Angular</p>
-                <p>Soy un profesional altamente capacitado en la creación y comunicación efectiva de componentes en Angular. Mi experiencia se centra en el diseño y desarrollo de arquitecturas de aplicaciones Angular, garantizando una comunicación fluida y eficiente entre los diferentes elementos del sistema. Mi enfoque preciso y orientado a componentes asegura un código modular, fácil de mantener y escalar.</p>
+        <div class="contenido_conocimientos"><p>Esta sección destaca mis conocimientos en constante evolución y refleja mi compromiso con la actualización continua. Mi portafolio se mantendrá actualizado a medida que avance en mis estudios y adquiera nuevos conceptos en diferentes tecnologías.</p></div>
+        <div class="angular"  (click)="angular()"><p>Angular</p></div>
+        <div class="laravel"  (click)="laravel()"><p>Laravel-api</p></div>
+        <div class="node"><p>node-api</p></div>
+        <div class="sql"><p>sql</p></div>
+        <div class="contenido_angular" *ngIf="angularclick">
+            <div class="ang_com-comp">
+                <p class="tit_com-comp">Comunicación de Componentes en Angular</p>
+                <ul class="ul_com-comp">
+                    <li class="li1_com-comp">Input</li>
+                    <li class="li2_com-comp">Output</li>
+                    <li class="li3_com-comp">Servicios</li>
+                    <li class="li4_com-comp">BehaviorSubject RXJS</li>
+                </ul>
+                
             </div>
-            <div>
-                <p>Consumo de APIs en Angular</p>
-                <p>Mi destreza en Angular abarca el consumo eficaz de APIs para integrar datos de manera eficiente en las aplicaciones. Poseo experiencia sólida en la implementación de servicios HTTP, gestión de peticiones asíncronas y manipulación de datos recibidos. Esta habilidad me permite desarrollar aplicaciones Angular que se conectan de manera dinámica con diversas fuentes de datos externas.</p>
+            <div class="ang_con-api">
+                <p class="tit_con-api">Consumo de APIs en Angular</p>
+                <ul class="ul_con-api">
+                    <li class="li1_con-api">Manejo de HttpClient</li>
+                    <li class="li2_con-api">Inyección de Dependencias</li>
+                    <li class="li3_con-api">Creación de Servicios</li>
+                    <li class="li4_con-api">Solicitudes HTTP</li>
+                    <li class="li5_con-api">Manejo de Observables</li>
+                </ul>
+                
             </div>
-            <div>
-                <p>Experto en Maquetación en Angular</p>
-                <p>Mi experiencia en Angular se extiende a la maquetación experta de interfaces de usuario atractivas y responsivas. Poseo un sólido conocimiento de las mejores prácticas de diseño y maquetación en Angular, utilizando herramientas y técnicas avanzadas para lograr interfaces de usuario visualmente impactantes y funcionalmente efectivas. Mi enfoque meticuloso en la maquetación contribuye a la creación de experiencias de usuario intuitivas y agradables.</p>
+            <div class="ang_maq">
+                <p class="tit_maq">Experto en Maquetación en Angular</p>
+                <ul class="ul_maq">
+                    <li class="li1_maq">Utilizacion de grid para maquetar</li>
+                    <li class="li2_maq">Manejo adecuado de css</li>
+                    <li class="li3_maq">Utilizacion de flex para organizacion</li>
+                    <li class="li4_maq">Animaciones</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contenido_laravel" *ngIf="laravelclick">
+            <div class="vacio"></div>
+            <div class="laravel_cont">
+                <p class="tit_laravel_cont">creacion api rest laravel</p>
+                <ul class="ul_laravel_cont">
+                    <li class="li1_laravel_cont">Query builder</li>
+                    <li class="li2_laravel_cont">Eloquent</li>
+                    <li class="li3_laravel_cont">Pruebas postman</li>
+                    <li class="li4_laravel_cont">Seguridad</li>
+                </ul>
+                
             </div>
         </div>
     </div>

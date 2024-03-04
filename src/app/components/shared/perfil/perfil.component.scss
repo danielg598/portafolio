@@ -134,12 +134,13 @@ b
     background-repeat: no-repeat;
     margin: 0;
     grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,35%);
+    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,17.5%) minmax(0,17.5%);
     grid-template-areas: 
     "titulo_conocimientos titulo_conocimientos titulo_conocimientos titulo_conocimientos"
     "c_conocimientos c_conocimientos c_conocimientos c_conocimientos"
     "angular laravel node sql"
-    "contenido_angular contenido_angular contenido_angular contenido_angular";
+    "contenido_angular contenido_angular contenido_angular contenido_angular"
+    "contenido_laravel contenido_laravel contenido_laravel contenido_laravel";
 }
 .titulo_conocimientos{
     grid-area: titulo_conocimientos;
@@ -166,16 +167,250 @@ b
 }
 .angular{
     grid-area: angular;
+    margin-top: 90px;
+}
+.angular p{
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    cursor: pointer;
 }
 .laravel{
     grid-area: laravel;
+    margin-top: 90px;
+}
+.laravel p{
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    cursor: pointer;
+    
 }
 .node{
     grid-area: node;
+    margin-top: 90px;
+}
+.node p{
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    cursor: pointer;
+    
 }
 .sql{
     grid-area: sql;
+    margin-top: 90px;
+}
+.sql p{
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    cursor: pointer;
+    
 }
 .contenido_angular{
     grid-area: contenido_angular;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    grid-template-areas: "ang_com-comp ang_con-api ang_maq";
+    padding: 0 10px;
+}
+.contenido_laravel{
+    grid-area: contenido_laravel;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    grid-template-areas: "laravel_cont vacio vacio";
+    padding: 0 10px;
+}
+.laravel_cont{
+    grid-area: laravel_cont;
+    background-color: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+}
+.vacio{
+    grid-area: vacio;
+}
+li::marker{
+    color: #374151;
+}
+.ang_com-comp{
+    grid-area: ang_com-comp;
+    background-color: #fafafa;
+    padding: 20px;
+}
+.tit_laravel_cont{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.tit_com-comp{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.ul_laravel_cont{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    grid-template-areas: 
+    "li1_laravel_cont li2_laravel_cont"
+    "li3_laravel_cont li4_laravel_cont";
+}
+.ul_com-comp{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    grid-template-areas: 
+    "li1_com-comp li2_com-comp"
+    "li3_com-comp li4_com-comp";
+}
+.li1_laravel_cont{
+    grid-area: li1_laravel_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li2_laravel_cont{
+    grid-area: li2_laravel_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li3_laravel_cont{
+    grid-area: li3_laravel_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li4_laravel_cont{
+    grid-area: li4_laravel_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li1_com-comp{
+    grid-area: li1_com-comp;
+    color: #000;
+    font-size: 15px;
+}
+.li2_com-comp{
+    grid-area: li2_com-comp;
+    color: #000;
+    font-size: 15px;
+}
+.li3_com-comp{
+    grid-area: li3_com-comp;
+    color: #000;
+    font-size: 15px;
+}
+.li4_com-comp{
+    grid-area: li4_com-comp;
+    color: #000;
+    font-size: 15px;
+}
+.ang_con-api{
+    grid-area: ang_con-api;
+    background-color: #fafafa;
+    padding: 20px;
+}
+.tit_con-api{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.ul_con-api{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    grid-template-areas: 
+    "li1_con-api li2_con-api li3_con-api"
+    "li4_con-api li5_con-api li5_con-api";
+}
+.li1_con-api{
+    grid-area: li1_con-api;
+    color: #000;
+    font-size: 15px;
+}
+.li2_con-api{
+    grid-area: li2_con-api;
+    color: #000;
+    font-size: 15px;
+}
+.li3_con-api{
+    grid-area: li3_con-api;
+    color: #000;
+    font-size: 15px;
+}
+.li4_con-api{
+    grid-area: li4_con-api;
+    color: #000;
+    font-size: 15px;
+}
+.li5_con-api{
+    grid-area: li5_con-api;
+    color: #000;
+    font-size: 15px;
+}
+.ang_maq{
+    grid-area: ang_maq;
+    background-color: #fafafa;
+    padding: 20px;
+}
+.tit_maq{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.ul_maq{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    grid-template-areas: 
+    "li1_maq li2_maq"
+    "li3_maq li4_maq";
+}
+.li1_maq{
+    grid-area: li1_maq;
+    color: #000;
+    font-size: 15px;
+}
+.li2_maq{
+    grid-area: li2_maq;
+    color: #000;
+    font-size: 15px;
+}
+.li3_maq{
+    grid-area: li3_maq;
+    color: #000;
+    font-size: 15px;
+}
+.li4_maq{
+    grid-area: li4_maq;
+    color: #000;
+    font-size: 18px;
 }
