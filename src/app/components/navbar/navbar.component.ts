@@ -23,45 +23,47 @@ export class NavbarComponent implements OnInit {
   menu(){
       this.items = [
         {
-            label: 'Perfil profesional',
-            icon: 'pi pi-fw pi-user',
-            items: [
-                {
-                    label: 'Sobre mi',
-                    icon: 'pi pi-fw pi-box',
-                    routerLink: ['sobreMi']
-                },
-                {
-                    separator: true
-                },
-                {
-                    label: 'Estudios y conocimientos',
-                    icon: 'pi pi-fw pi-box',
-                    routerLink: ['estudios']
-                },
-                {
-                    separator: true
-                },
-                {
-                    label: 'Experiencia',
-                    icon: 'pi pi-fw pi-box',
-                    routerLink: ['experiencia']
-                }
-            ]
+            label: 'Sobre mi',
+            routerLink: ['sobreMi']
+            // icon: 'pi pi-fw pi-user',
+            // items: [
+            //     {
+            //         label: 'Sobre mi',
+            //         icon: 'pi pi-fw pi-box',
+            //         routerLink: ['sobreMi']
+            //     },
+            //     {
+            //         separator: true
+            //     },
+            //     {
+            //         label: 'Estudios y conocimientos',
+            //         icon: 'pi pi-fw pi-box',
+            //         routerLink: ['estudios']
+            //     },
+            //     {
+            //         separator: true
+            //     },
+            //     {
+            //         label: 'Experiencia',
+            //         icon: 'pi pi-fw pi-box',
+            //         routerLink: ['experiencia']
+            //     }
+            // ]
         },
         {
             label: 'Proyectos',
-            icon: 'pi pi-fw pi-pencil',
-            items: [
-                {
-                    label: 'Api',
-                    icon: 'pi pi-fw pi-server',
-                    routerLink: ['api']
-                },
-                {
-                    separator: true
-                },
-            ]
+            routerLink: ['api']
+            // icon: 'pi pi-fw pi-pencil',
+            // items: [
+            //     {
+            //         label: 'Api',
+            //         icon: 'pi pi-fw pi-server',
+            //         routerLink: ['api']
+            //     },
+            //     {
+            //         separator: true
+            //     },
+            // ]
         }
     ];
   }
