@@ -63,13 +63,17 @@ b
     display: grid;
     grid-area: contenedor_contenido_contenedor2;
     grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: minmax(0,15%) minmax(0,15%) minmax(0,30%) minmax(0,15%) minmax(0,25%);
+    grid-template-rows: minmax(0,15%) minmax(0,10%) minmax(0,20%) minmax(0,10%) minmax(0,40%) minmax(0,5%);
     grid-template-areas: 
     "titulo_contenedor2 titulo_contenedor2 titulo_contenedor2 titulo_contenedor2"
     "titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
     "estudio1 estudio1 estudio1 estudio1"
     "titulo_estudio2 titulo_estudio2 titulo_estudio2 titulo_estudio2"
-    "estudio2 estudio2 estudio2 estudio2";
+    "estudio2 estudio2 estudio2 estudio2"
+    "boton boton boton boton";
+}
+.boton{
+    grid-area: boton;
 }
 .titulo_contenedor2{
     display: flex;
@@ -135,13 +139,14 @@ b
     background-repeat: no-repeat;
     margin: 0;
     grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,17.5%) minmax(0,17.5%);
+    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,11.6%) minmax(0,11.6%) minmax(0,11.6%);
     grid-template-areas: 
     "titulo_conocimientos titulo_conocimientos titulo_conocimientos titulo_conocimientos"
     "c_conocimientos c_conocimientos c_conocimientos c_conocimientos"
     "angular laravel node sql"
     "contenido_angular contenido_angular contenido_angular contenido_angular"
-    "contenido_laravel contenido_laravel contenido_laravel contenido_laravel";
+    "contenido_laravel contenido_laravel contenido_laravel contenido_laravel"
+    "contenido_node contenido_node contenido_node contenido_node";
 }
 .titulo_conocimientos{
     grid-area: titulo_conocimientos;
@@ -412,6 +417,61 @@ li::marker{
 }
 .li4_maq{
     grid-area: li4_maq;
+    color: #000;
+    font-size: 18px;
+}
+.contenido_node{
+    grid-area: contenido_node;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    grid-template-areas: "node_cont vacio2 vacio2";
+    padding: 0 10px;
+}
+.node_cont{
+    grid-area: node_cont;
+    background-color: #fafafa;
+    padding: 20px;
+    margin-top: 20px;
+}
+.vacio2{
+    grid-area: vacio2;
+}
+.tit_node_cont{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-family: "Anta", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.ul_node_cont{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    grid-template-areas: 
+    "li1_node_cont li2_node_cont"
+    "li3_node_cont li4_node_cont";
+}
+.li1_node_cont{
+    grid-area: li1_node_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li2_node_cont{
+    grid-area: li2_node_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li3_node_cont{
+    grid-area: li3_node_cont;
+    color: #000;
+    font-size: 15px;
+}
+.li4_node_cont{
+    grid-area: li4_node_cont;
     color: #000;
     font-size: 18px;
 }

@@ -14,10 +14,11 @@
             <div class="estudio1">
                 <p >Soy Tecnólogo Profesional en Desarrollo de Software con énfasis en aplicaciones web, egresado de la reconocida Institución Universitaria Pascual Bravo. Mi formación académica y experiencia en el campo me han dotado de sólidos conocimientos en el diseño, implementación y mantenimiento de soluciones tecnológicas innovadoras. A lo largo de mi trayectoria educativa, he cultivado habilidades especializadas que me permiten abordar desafíos complejos en el desarrollo de software, con un enfoque particular en aplicaciones web de última generación.</p>
             </div>
-            <div class="titulo_estudio2"><p>Diseñador grafico</p></div>
+            <div class="titulo_estudio2"><p>Cursos</p></div>
             <div class="estudio2">
-                <p>Soy Técnico Profesional en Diseño Gráfico, con especialización en campañas publicitarias, egresado de la prestigiosa Institución Técnica CESDE. Mi formación académica ha sido integral, permitiéndome adquirir habilidades avanzadas en el diseño creativo y estratégico, especialmente orientado hacia campañas publicitarias impactantes. Mi enfoque proactivo y mi capacidad para fusionar la creatividad con las últimas tendencias tecnológicas me posicionan como un profesional versátil y preparado para afrontar los retos dinámicos del mundo del diseño gráfico y la publicidad.</p>
+                <p>Como apasionado desarrollador de software, considero que la actualización constante es esencial para ofrecer soluciones innovadoras y eficientes. Mi compromiso con la mejora continua se refleja en mi constante búsqueda de conocimiento a través de diversos cursos y capacitaciones. Exploro activamente nuevas tecnologías para mantenerme al tanto de las últimas tendencias del mundo del desarrollo de software. Este enfoque proactivo no solo me permite adaptarme rápidamente a los avances tecnológicos, sino que también garantiza que mis habilidades estén siempre alineadas con las demandas cambiantes de la industria. Estoy comprometido a ofrecer soluciones de software de calidad respaldadas por un conjunto actualizado de habilidades y conocimientos.</p>
             </div>
+            <button class="boton">vamos...</button>
         </div>
     </div>
     <div class="container3">
@@ -25,8 +26,9 @@
         <div class="contenido_conocimientos"><p>Esta sección destaca mis conocimientos en constante evolución y refleja mi compromiso con la actualización continua. Mi portafolio se mantendrá actualizado a medida que avance en mis estudios y adquiera nuevos conceptos en diferentes tecnologías.</p></div>
         <div class="angular"  (click)="angular()"><p>Angular</p></div>
         <div class="laravel"  (click)="laravel()"><p>Laravel-api</p></div>
-        <div class="node"><p>node-api</p></div>
+        <div class="node" (click)="node()"><p>node-api</p></div>
         <div class="sql"><p>sql</p></div>
+
         <div class="contenido_angular" *ngIf="angularclick">
             <div class="ang_com-comp">
                 <p class="tit_com-comp">Comunicación de Componentes en Angular</p>
@@ -69,6 +71,20 @@
                     <li class="li2_laravel_cont">Eloquent</li>
                     <li class="li3_laravel_cont">Pruebas postman</li>
                     <li class="li4_laravel_cont">Seguridad</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="contenido_node" *ngIf="nodejs">
+            <div class="vacio2"></div>
+            <div class="node_cont">
+                <p class="tit_node_cont">creacion api rest node js</p>
+                <ul class="ul_node_cont">
+                    <li class="li1_node_cont">Api REST</li>
+                    <li class="li2_node_cont">Fundamentos socket</li>
+                    <li class="li3_node_cont">Seguridad</li>
+                    <li class="li4_node_cont">JWT</li>
                 </ul>
                 
             </div>
