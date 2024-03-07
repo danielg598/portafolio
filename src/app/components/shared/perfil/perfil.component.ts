@@ -16,6 +16,7 @@ export class PerfilComponent implements OnInit{
   angularclick:boolean = true;
   laravelclick:boolean = false;
   nodejs:boolean = false;
+  sql_:boolean = false;
 
   constructor( ){}
 
@@ -27,16 +28,25 @@ export class PerfilComponent implements OnInit{
     this.angularclick = true;
     this.laravelclick = false;
     this.nodejs = false;
+    this.sql_=false;
   }
   laravel(){
     this.laravelclick = true;
     this.angularclick = false;
     this.nodejs = false;
+    this.sql_=false;
   }
   node(){
     this.nodejs = true;
     this.laravelclick = false;
     this.angularclick = false;
+    this.sql_=false;
+  }
+  sql(){
+    this.nodejs = false;
+    this.laravelclick = false;
+    this.angularclick = false;
+    this.sql_=true;
   }
 
 }

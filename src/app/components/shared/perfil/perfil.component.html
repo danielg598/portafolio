@@ -18,7 +18,8 @@
             <div class="estudio2">
                 <p>Como apasionado desarrollador de software, considero que la actualización constante es esencial para ofrecer soluciones innovadoras y eficientes. Mi compromiso con la mejora continua se refleja en mi constante búsqueda de conocimiento a través de diversos cursos y capacitaciones. Exploro activamente nuevas tecnologías para mantenerme al tanto de las últimas tendencias del mundo del desarrollo de software. Este enfoque proactivo no solo me permite adaptarme rápidamente a los avances tecnológicos, sino que también garantiza que mis habilidades estén siempre alineadas con las demandas cambiantes de la industria. Estoy comprometido a ofrecer soluciones de software de calidad respaldadas por un conjunto actualizado de habilidades y conocimientos.</p>
             </div>
-            <button class="boton">vamos...</button>
+            <div class="espacio_c2"></div>
+            <button class="boton" disabled>vamos...</button>
         </div>
     </div>
     <div class="container3">
@@ -27,7 +28,7 @@
         <div class="angular"  (click)="angular()"><p>Angular</p></div>
         <div class="laravel"  (click)="laravel()"><p>Laravel-api</p></div>
         <div class="node" (click)="node()"><p>node-api</p></div>
-        <div class="sql"><p>sql</p></div>
+        <div class="sql" (click)="sql()"><p>sql</p></div>
 
         <div class="contenido_angular" *ngIf="angularclick">
             <div class="ang_com-comp">
@@ -85,6 +86,20 @@
                     <li class="li2_node_cont">Fundamentos socket</li>
                     <li class="li3_node_cont">Seguridad</li>
                     <li class="li4_node_cont">JWT</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="contenido_sql" *ngIf="sql_">
+            <div class="vacio3"></div>
+            <div class="sql_cont">
+                <p class="tit_sql_cont">Manejo de sql</p>
+                <ul class="ul_sql_cont">
+                    <li class="li1_sql_cont">Selecciones complejas</li>
+                    <li class="li2_sql_cont">Procedimientos almacenados</li>
+                    <li class="li3_sql_cont">Vistas</li>
+                    <li class="li4_sql_cont">Relaciones</li>
                 </ul>
                 
             </div>
