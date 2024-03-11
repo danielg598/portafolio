@@ -2,26 +2,43 @@ body{
     margin: 0;
     padding: 0;
 }
-b
+.container{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    grid-template-rows: minmax(0,30%) minmax(0,70%);
+    grid-template-areas: 
+    "descripcion descripcion descripcion descripcion descripcion descripcion"
+    "container_principal container_principal container_principal container_principal container_principal container_principal";
+}
 .container_principal{
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-area: container_principal;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(5,minmax(0,1fr));
     gap: 10px;
-    grid-template-areas: "container1 container1 container1 container1 container1 container1" 
-    // "container1 container1 container1 container1 container1 container1"
-    "container2 container2 container2 container2 container2 container2"
-    "container3 container3 container3 container3 container3 container3";
+    grid-template-areas: 
+    "foto_portafolio foto_portafolio foto_portafolio titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
+    "foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1"
+    "foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1"
+    "titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica"
+    "grafica grafica grafica grafica grafica grafica grafica grafica"
+    ;
+    background: linear-gradient(rgba(239, 239, 235, 0.8), rgba(239, 239, 235, 0.8)), url('../../../../assets/fondo2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fafafa;
 }
-.container1{
-    display: grid;
-    // background-color: #fafafa;
-    width: 100%;
-    grid-area: container1;
+.grafica{
     height: 100%;
-    margin-top: 35px;
+    width: 100%;
+    grid-area: grafica;
 }
 .descripcion{
+    grid-area: descripcion;
+    margin-top: 125px;
+}
+.descripcion p{
     color: #fafafa;
     font-size: 64px;
     line-height: 1.5;
@@ -31,6 +48,7 @@ b
     letter-spacing: 1px;
     animation: fadeInUp 1s ease-out;
     padding-left: 20px;
+    margin: 0;
 }
 .highlight {
     font-size: 79px;
@@ -39,61 +57,26 @@ b
     -webkit-text-stroke: 1px #fafafa;
     animation: scaleText 2.5s infinite alternate;
 }
-.container2{
-    display: grid;
-    background-color: #fafafa;
-    width: 100%;
-    grid-area: container2;
-    margin-top: 10px;
-    height: 100%;
-    gap: 20px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-areas: "foto_portafolio contenedor_contenido_contenedor2 contenedor_contenido_contenedor2";
-}
 .foto_portafolio{
     grid-area: foto_portafolio;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
 }
 .foto_portafolio img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
 }
-.contenedor_contenido_contenedor2{
-    display: grid;
-    grid-area: contenedor_contenido_contenedor2;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: minmax(0,15%) minmax(0,10%) minmax(0,20%) minmax(0,10%) minmax(0,40%) minmax(0,5%);
-    grid-template-areas: 
-    "titulo_contenedor2 titulo_contenedor2 titulo_contenedor2 titulo_contenedor2"
-    "titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
-    "estudio1 estudio1 estudio1 estudio1"
-    "titulo_estudio2 titulo_estudio2 titulo_estudio2 titulo_estudio2"
-    "estudio2 estudio2 estudio2 estudio2"
-    "espacio_c2 espacio_c2 espacio_c2 boton";
-}
-.boton{
-    grid-area: boton;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: "Anta", sans-serif;
-    font-weight: 700;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-.titulo_contenedor2{
+.titulo_grafica{
+    grid-area: titulo_grafica;
+    padding-top: 12%;
     display: flex;
     justify-content: center;
-    grid-area: titulo_contenedor2;
 }
-.titulo_contenedor2 p{
-    font-family: "Permanent Marker", cursive;
-    font-size: 75px;
-    color: #1c1b22;
+.titulo_grafica p{
+    font-family: "Anta", sans-serif;
     font-weight: 700;
+    font-size: 35px;
+    color: #374151;
     margin: 0;
-    padding: 0;
 }
 .titulo_estudio1{
     grid-area: titulo_estudio1;
@@ -113,438 +96,4 @@ b
     font-size: 15px;
     color: #000;
     line-height: 2;
-}
-.titulo_estudio2{
-    grid-area: titulo_estudio2;
-}
-.titulo_estudio2 p{
-    font-family: "Anta", sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    color: #374151;
-}
-.estudio2{
-    grid-area: estudio2;
-}
-.estudio2 p{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: #000;
-    line-height: 2;
-}
-.espacio_c2{
-    grid-area: espacio_c2;
-}
-.container3{
-    display: grid;
-    background-color: #fafafa;
-    width: 100%;
-    grid-area: container3;
-    margin-top: 10px;
-    height: 100%;
-    background: linear-gradient(rgba(18, 18, 17, 0.8), rgba(18, 18, 17, 0.8)), url('../../../../assets/fondo1.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: minmax(0,15%) minmax(0,35%) minmax(0,15%) minmax(0,8.75%) minmax(0,8.75%) minmax(0,8.75%) minmax(0,8.75%);
-    grid-template-areas: 
-    "titulo_conocimientos titulo_conocimientos titulo_conocimientos titulo_conocimientos"
-    "c_conocimientos c_conocimientos c_conocimientos c_conocimientos"
-    "angular laravel node sql"
-    "contenido_angular contenido_angular contenido_angular contenido_angular"
-    "contenido_laravel contenido_laravel contenido_laravel contenido_laravel"
-    "contenido_node contenido_node contenido_node contenido_node"
-    "contenido_sql contenido_sql contenido_sql contenido_sql";
-}
-.titulo_conocimientos{
-    grid-area: titulo_conocimientos;
-}
-.titulo_conocimientos p{
-    display: flex;
-    justify-content: flex-start;
-    font-family: "Permanent Marker", cursive;
-    font-size: 75px;
-    color: #fafafa;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-}
-.contenido_conocimientos{
-    grid-area: c_conocimientos;
-}
-.contenido_conocimientos p{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    color: #fafafa;
-    line-height: 2;
-}
-.angular{
-    grid-area: angular;
-    margin-top: 90px;
-}
-.angular p{
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 45px;
-    font-weight: 800;
-    cursor: pointer;
-}
-.laravel{
-    grid-area: laravel;
-    margin-top: 90px;
-}
-.laravel p{
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 45px;
-    font-weight: 800;
-    cursor: pointer;
-    
-}
-.node{
-    grid-area: node;
-    margin-top: 90px;
-}
-.node p{
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 45px;
-    font-weight: 800;
-    cursor: pointer;
-    
-}
-.sql{
-    grid-area: sql;
-    margin-top: 90px;
-}
-.sql p{
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 45px;
-    font-weight: 800;
-    cursor: pointer;
-    
-}
-.contenido_angular{
-    grid-area: contenido_angular;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-rows: repeat(1,minmax(0,1fr));
-    grid-template-areas: "ang_com-comp ang_con-api ang_maq";
-    padding: 0 10px;
-}
-.contenido_laravel{
-    grid-area: contenido_laravel;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-rows: repeat(1,minmax(0,1fr));
-    grid-template-areas: "laravel_cont vacio vacio";
-    padding: 0 10px;
-}
-.laravel_cont{
-    grid-area: laravel_cont;
-    background-color: #fafafa;
-    padding: 20px;
-    margin-top: 20px;
-}
-.vacio{
-    grid-area: vacio;
-}
-li::marker{
-    color: #374151;
-}
-.ang_com-comp{
-    grid-area: ang_com-comp;
-    background-color: #fafafa;
-    padding: 20px;
-}
-.tit_laravel_cont{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.tit_com-comp{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.ul_laravel_cont{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_laravel_cont li2_laravel_cont"
-    "li3_laravel_cont li4_laravel_cont";
-}
-.ul_com-comp{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_com-comp li2_com-comp"
-    "li3_com-comp li4_com-comp";
-}
-.li1_laravel_cont{
-    grid-area: li1_laravel_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li2_laravel_cont{
-    grid-area: li2_laravel_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li3_laravel_cont{
-    grid-area: li3_laravel_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li4_laravel_cont{
-    grid-area: li4_laravel_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li1_com-comp{
-    grid-area: li1_com-comp;
-    color: #000;
-    font-size: 15px;
-}
-.li2_com-comp{
-    grid-area: li2_com-comp;
-    color: #000;
-    font-size: 15px;
-}
-.li3_com-comp{
-    grid-area: li3_com-comp;
-    color: #000;
-    font-size: 15px;
-}
-.li4_com-comp{
-    grid-area: li4_com-comp;
-    color: #000;
-    font-size: 15px;
-}
-.ang_con-api{
-    grid-area: ang_con-api;
-    background-color: #fafafa;
-    padding: 20px;
-}
-.tit_con-api{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.ul_con-api{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_con-api li2_con-api li3_con-api"
-    "li4_con-api li5_con-api li5_con-api";
-}
-.li1_con-api{
-    grid-area: li1_con-api;
-    color: #000;
-    font-size: 15px;
-}
-.li2_con-api{
-    grid-area: li2_con-api;
-    color: #000;
-    font-size: 15px;
-}
-.li3_con-api{
-    grid-area: li3_con-api;
-    color: #000;
-    font-size: 15px;
-}
-.li4_con-api{
-    grid-area: li4_con-api;
-    color: #000;
-    font-size: 15px;
-}
-.li5_con-api{
-    grid-area: li5_con-api;
-    color: #000;
-    font-size: 15px;
-}
-.ang_maq{
-    grid-area: ang_maq;
-    background-color: #fafafa;
-    padding: 20px;
-}
-.tit_maq{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.ul_maq{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_maq li2_maq"
-    "li3_maq li4_maq";
-}
-.li1_maq{
-    grid-area: li1_maq;
-    color: #000;
-    font-size: 15px;
-}
-.li2_maq{
-    grid-area: li2_maq;
-    color: #000;
-    font-size: 15px;
-}
-.li3_maq{
-    grid-area: li3_maq;
-    color: #000;
-    font-size: 15px;
-}
-.li4_maq{
-    grid-area: li4_maq;
-    color: #000;
-    font-size: 18px;
-}
-.contenido_node{
-    grid-area: contenido_node;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-rows: repeat(1,minmax(0,1fr));
-    grid-template-areas: "node_cont vacio2 vacio2";
-    padding: 0 10px;
-}
-.node_cont{
-    grid-area: node_cont;
-    background-color: #fafafa;
-    padding: 20px;
-    margin-top: 20px;
-}
-.vacio2{
-    grid-area: vacio2;
-}
-.tit_node_cont{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.ul_node_cont{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_node_cont li2_node_cont"
-    "li3_node_cont li4_node_cont";
-}
-.li1_node_cont{
-    grid-area: li1_node_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li2_node_cont{
-    grid-area: li2_node_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li3_node_cont{
-    grid-area: li3_node_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li4_node_cont{
-    grid-area: li4_node_cont;
-    color: #000;
-    font-size: 18px;
-}
-.contenido_sql{
-    grid-area: contenido_sql;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-rows: repeat(1,minmax(0,1fr));
-    grid-template-areas: "sql_cont vacio3 vacio3";
-    padding: 0 10px;
-}
-.sql_cont{
-    grid-area: sql_cont;
-    background-color: #fafafa;
-    padding: 20px;
-    margin-top: 20px;
-}
-.vacio3{
-    grid-area: vacio3;
-}
-.tit_sql_cont{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    font-family: "Anta", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-.ul_sql_cont{
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 20px;
-    grid-template-areas: 
-    "li1_sql_cont li2_sql_cont"
-    "li3_sql_cont li4_sql_cont";
-}
-.li1_sql_cont{
-    grid-area: li1_sql_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li2_sql_cont{
-    grid-area: li2_sql_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li3_sql_cont{
-    grid-area: li3_sql_cont;
-    color: #000;
-    font-size: 15px;
-}
-.li4_sql_cont{
-    grid-area: li4_sql_cont;
-    color: #000;
-    font-size: 15px;
-}
-@media only screen and (max-width:1350px) {
-    .container2{
-        grid-template-rows: repeat(2,(minmax(0,1fr)));
-        grid-template-areas: "foto_portafolio foto_portafolio foto_portafolio"
-        "contenedor_contenido_contenedor2 contenedor_contenido_contenedor2 contenedor_contenido_contenedor2";
-    }
 }
