@@ -38,11 +38,7 @@ body{
     "titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica"
     "grafica grafica grafica grafica grafica grafica grafica grafica";
     grid-area: grafica_container;
-    background: linear-gradient(rgba(37, 37, 36, 0.8), rgba(37, 37, 36, 0.8)), url('../../../../assets/fondo4.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #3c3c3c;
+    background-color: #fafafa;
 }
 .grafica{
     height: 100%;
@@ -51,7 +47,7 @@ body{
 }
 .descripcion{
     grid-area: descripcion;
-    margin-top: 125px;
+    margin-top: 57px;
 }
 .descripcion p{
     color: #fafafa;
@@ -114,4 +110,49 @@ body{
     font-size: 15px;
     color: #000;
     line-height: 2;
+}
+
+@media only screen and (max-width: 950px) {
+    .descripcion p{
+        font-size: 44px;
+    }
+    .highlight{
+        font-size: 59px;
+    }
+}
+@media only screen and (max-width: 669px){
+    .container{
+        grid-template-rows: 45% 65% 45%;
+        grid-template-areas:
+            "descripcion descripcion descripcion descripcion descripcion descripcion"
+            "container_principal container_principal container_principal container_principal container_principal container_principal"
+            "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
+    }
+}
+@media only screen and (max-width: 960px){
+    .container{
+        grid-template-rows: 45% 65% 45%;
+        grid-template-areas:
+            "descripcion descripcion descripcion descripcion descripcion descripcion"
+            "container_principal container_principal container_principal container_principal container_principal container_principal"
+            "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
+    }
+}
+@media only screen and (max-width: 1000px){
+    .container{
+        grid-template-rows: 35% 30% 40%;
+        grid-template-areas:
+            "descripcion descripcion descripcion descripcion descripcion descripcion"
+            "container_principal container_principal container_principal container_principal container_principal container_principal"
+            "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
+    }
+}
+@media only screen and (max-width: 1900px){
+    .container{
+        grid-template-rows: 30% 30% 40%;
+        grid-template-areas:
+            "descripcion descripcion descripcion descripcion descripcion descripcion"
+            "container_principal container_principal container_principal container_principal container_principal container_principal"
+            "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
+    }
 }

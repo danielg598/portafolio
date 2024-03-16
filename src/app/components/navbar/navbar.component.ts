@@ -51,8 +51,8 @@ export class NavbarComponent implements OnInit {
             // ]
         },
         {
-            label: 'Proyectos',
-            routerLink: ['api']
+            // label: 'Proyectos',
+            // routerLink: ['api']
             // icon: 'pi pi-fw pi-pencil',
             // items: [
             //     {

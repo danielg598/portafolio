@@ -115,8 +115,6 @@ export class GraficaConocimientosComponent {
     this.chart = this.root.container.children.push(am5xy.XYChart.new(this.root, {
       panX: false,
       panY: false,
-      wheelX: "none",
-      wheelY: "none",
       paddingLeft: 0
     }));
 
@@ -172,16 +170,13 @@ export class GraficaConocimientosComponent {
     // });
 
     this.series.columns.template.adapters.add("fill",  (fill, target) => {
-      return this.chart.get("colors")?.getIndex(this.series.columns.indexOf(target));
+      return this.chart.get("colors")?.getIndex(this.series.columns.indexOf(target)%3);
     });
   
     this.chart.get("colors")?.set("colors", [
-      am5.color("#121212"),
-      am5.color("#101010"),
       am5.color("#383838"),
-      am5.color("#5e5e5e"),
-      am5.color("#aaaaaa"),
-      am5.color("#5d5d5d")
+      am5.color("#a3a3a3"),
+      am5.color("#0b0b0b")
     ]);
     
     this.series.columns.template.adapters.add("stroke", (stroke, target) => {
