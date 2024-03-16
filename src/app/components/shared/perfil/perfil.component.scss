@@ -4,30 +4,40 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(6,minmax(0,1fr));
-    grid-template-rows: minmax(0,30%) minmax(0,70%);
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 50% 40% 100%;
     grid-template-areas: 
     "descripcion descripcion descripcion descripcion descripcion descripcion"
-    "container_principal container_principal container_principal container_principal container_principal container_principal";
+    "container_principal container_principal container_principal container_principal container_principal container_principal"
+    "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
 }
 .container_principal{
     display: grid;
     grid-area: container_principal;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    grid-template-rows: repeat(5,minmax(0,1fr));
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 15% 25% 25%;
     gap: 10px;
     grid-template-areas: 
-    "foto_portafolio foto_portafolio foto_portafolio titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
-    "foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1"
-    "foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1"
-    "titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica"
-    "grafica grafica grafica grafica grafica grafica grafica grafica"
+    "foto_portafolio foto_portafolio titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
+    "foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1 estudio1"
+    "foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1 estudio1 estudio1"
     ;
     background: linear-gradient(rgba(239, 239, 235, 0.8), rgba(239, 239, 235, 0.8)), url('../../../../assets/fondo2.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #fafafa;
+}
+.grafica_container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 100% 100%;
+    grid-template-areas: 
+    "titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica"
+    "grafica grafica grafica grafica grafica grafica grafica grafica";
+    grid-area: grafica_container;
 }
 .grafica{
     height: 100%;
@@ -60,10 +70,15 @@ body{
 .foto_portafolio{
     grid-area: foto_portafolio;
     max-width: 100%;
-    height: 100%;
+    max-width: 300px;
+    // height: auto;
+    // position: relative;
 }
 .foto_portafolio img{
-    max-width: 100%;
+    // position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 .titulo_grafica{
     grid-area: titulo_grafica;
