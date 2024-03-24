@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComunicacionApiComponent } from './comunicacion-api.component';
+import { AngularComponent } from './angular.component';
 
-describe('ComunicacionApiComponent', () => {
-  let component: ComunicacionApiComponent;
-  let fixture: ComponentFixture<ComunicacionApiComponent>;
+describe('AngularComponent', () => {
+  let component: AngularComponent;
+  let fixture: ComponentFixture<AngularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComunicacionApiComponent]
+      imports: [AngularComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ComunicacionApiComponent);
+    fixture = TestBed.createComponent(AngularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
