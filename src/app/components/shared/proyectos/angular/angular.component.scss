@@ -1,5 +1,14 @@
-.project-1{
-    grid-area: project-1;
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "project1 espacio espacio"
+    "espacio2 espacio2 espacio2";
+    place-items: center;
+}
+.project1{
+    grid-area: project1;
     display: grid;
     grid-template-rows: 35% 20% 35% 10%;
     grid-template-columns: 100%;
@@ -29,6 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 5px;
 }
 .titulos p:nth-child(1){
     font-family: "Anta", sans-serif;
@@ -46,6 +56,10 @@
 }
 .descripcion{
     grid-area: descripcion;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
     color: #000;
 }
 .btn{
@@ -59,4 +73,17 @@
     width: 100px;
     border-radius: 5px 0 0 0;
     background-color: #121212;
+}
+.btn-buton a{
+    color: #e6dc13;
+    font-family: "Anta", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.espacio{
+    grid-area: espacio;
+}
+.espacio2{
+    grid-area: espacio2;
 }
