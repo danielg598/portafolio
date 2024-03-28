@@ -1,4 +1,4 @@
-<main style="margin-top: 70px;">
+<main >
     <div class="projects">
         <div class="project1">
             <div class="imagen">
@@ -9,16 +9,23 @@
                 <p>gifs app</p>
             </div>
             <div class="descripcion">
-                es una aplicación en la cual se trabaja mediante comunicación entre componentes, y se consume un api externo. En la cual la idea es mostrar una de interfaz de búsqueda que también muestre un historial de lo que se ha buscado.
+                Es una aplicación en la cual se trabaja mediante comunicación entre componentes, y se consume un api externo. En la cual la idea es mostrar una de interfaz de búsqueda que también muestre un historial de lo que se ha buscado.
             </div>
             <div class="btn">
                 <button type="button" class="btn-buton">
                     <a href="https://jovial-profiterole-c79016.netlify.app/" target="_blank">Go</a>
                 </button>
             </div>
+            <div class="icono-modal">
+                <svg (click)="infoAppGiffs()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+            </div>
         </div>
         <div class="espacio"></div>
         <div class="espacio2"></div>
+        
     </div>
 </main>
-    
+
+<ng-template cdk-portal #InfoAppGiff="cdkPortal">
+    <app-angular-info-app-giffs ></app-angular-info-app-giffs>
+</ng-template>

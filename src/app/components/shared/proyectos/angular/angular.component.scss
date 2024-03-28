@@ -1,3 +1,7 @@
+main{
+    position: fixed;
+    top: 90px;
+}
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -6,20 +10,21 @@
     grid-template-areas: "project1 espacio espacio"
     "espacio2 espacio2 espacio2";
     place-items: center;
+    padding: 5px;
 }
 .project1{
     grid-area: project1;
     display: grid;
     grid-template-rows: 35% 20% 35% 10%;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "imagen"
-    "titulos"
-    "descripcion"
-    "btn"
+    "imagen imagen"
+    "titulos titulos"
+    "descripcion descripcion"
+    "modal btn"
     ;
     background-color: #fafafa;
-    width: 300px;
+    width: 100%;
     height: 100%;
 }
 .imagen{
@@ -86,4 +91,27 @@
 }
 .espacio2{
     grid-area: espacio2;
+}
+.icono-modal{
+    grid-area: modal;
+    width: 25px;
+    margin-left: 5px;
+}
+.icono-modal svg{
+    fill: #121212;
+    cursor: pointer;
+}
+@media only screen and (max-width: 945px){
+    .descripcion{
+        display: none;
+    }
+    .project1{
+        grid-template-rows: 45% 35% 20%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "imagen imagen"
+        "titulos titulos"
+        "modal btn"
+        ;
+    }
 }
