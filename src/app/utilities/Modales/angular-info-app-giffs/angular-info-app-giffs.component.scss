@@ -3,13 +3,14 @@
     display: grid;
     overflow-x: hidden;
     overflow-y: auto;
-    grid-template-rows: 35% 20% 20% 45%;
+    grid-template-rows:40% 20% 10% 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "imagen imagen"
     "titulos titulos"
     "titulo1 titulo1"
     "conocimientos conocimientos"
+    "github github"
     ;
     background-color: #fafafa;
     width: 500px;
@@ -32,6 +33,20 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 5px;
+}
+.repositorio{
+  grid-area: github;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.repositorio a{
+  font-family: "Anta", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6a6a6a;
+  margin: 0;
+  text-decoration: none;
 }
 .titulos p:nth-child(1){
     font-family: "Anta", sans-serif;
@@ -61,7 +76,7 @@
     grid-area: conocimientos;
     // height: 280px;
     /* width: 357px; */
-    
+
     // max-height: 280px;
     // border-left: 1px solid #dedede;
     // padding: 5% 15%;

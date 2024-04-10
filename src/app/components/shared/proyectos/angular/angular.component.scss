@@ -6,18 +6,18 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    grid-template-areas: "project1 espacio espacio"
+    gap: 20px;
+    grid-template-areas: "project1 project2 espacio"
     "espacio2 espacio2 espacio2";
     place-items: center;
-    padding: 5px;
+    padding: 10px;
 }
 .project1{
     grid-area: project1;
     display: grid;
     grid-template-rows: 35% 20% 35% 10%;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "imagen imagen"
     "titulos titulos"
     "descripcion descripcion"
@@ -27,23 +27,49 @@ main{
     width: 100%;
     height: 100%;
 }
+.project2{
+  grid-area: project2;
+  display: grid;
+  grid-template-rows: 35% 20% 35% 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "imagen2 imagen2"
+  "titulos2 titulos2"
+  "descripcion2 descripcion2"
+  "modal2 btn2"
+  ;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+}
 .imagen{
     width: 100%;
     height: 100%;
     grid-area: imagen;
 }
 .imagen img{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.imagen2{
+  width: 100%;
+  height: 100%;
+  grid-area: imagen2;
+}
+.imagen2 img{
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 .titulos{
-    grid-area: titulos;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 5px;
+  grid-area: titulos;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
 }
 .titulos p:nth-child(1){
     font-family: "Anta", sans-serif;
@@ -59,8 +85,37 @@ main{
     color: #2c2b2b;
     margin: 0;
 }
+.titulos2{
+  grid-area: titulos2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.titulos2 p:nth-child(1){
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+.titulos2 p:nth-child(2){
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #2c2b2b;
+    margin: 0;
+}
 .descripcion{
-    grid-area: descripcion;
+  grid-area: descripcion;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+}
+.descripcion2{
+    grid-area: descripcion2;
     padding: 5px;
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
@@ -68,10 +123,10 @@ main{
     color: #000;
 }
 .btn{
-    width: 100%;
-    grid-area: btn;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  grid-area: btn;
+  display: flex;
+  justify-content: flex-end;
 }
 .btn-buton{
     cursor: pointer;
@@ -85,6 +140,25 @@ main{
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
+}
+.btn2{
+  width: 100%;
+  grid-area: btn2;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-buton2{
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px 0 0 0;
+  background-color: #121212;
+}
+.btn-buton2 a{
+  color: #e6dc13;
+  font-family: "Anta", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
 }
 .espacio{
     grid-area: espacio;
@@ -101,6 +175,15 @@ main{
     fill: #121212;
     cursor: pointer;
 }
+.icono-modal2{
+  grid-area: modal2;
+  width: 25px;
+  margin-left: 5px;
+}
+.icono-modal2 svg{
+  fill: #121212;
+  cursor: pointer;
+}
 @media only screen and (max-width: 945px){
     .descripcion{
         display: none;
@@ -108,7 +191,7 @@ main{
     .project1{
         grid-template-rows: 45% 35% 20%;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
         "imagen imagen"
         "titulos titulos"
         "modal btn"
