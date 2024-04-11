@@ -188,13 +188,30 @@ main{
     .descripcion{
         display: none;
     }
+    .descripcion2{
+      display: none;
+    }
     .project1{
-        grid-template-rows: 45% 35% 20%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "imagen imagen"
-        "titulos titulos"
-        "modal btn"
-        ;
+      grid-template-rows: 45% 40% 15%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "imagen imagen"
+      "titulos titulos"
+      "modal btn"
+      ;
+    }
+    .project2{
+      grid-template-rows: 45% 40% 15%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "imagen2 imagen2"
+      "titulos2 titulos2"
+      "modal2 btn2"
+      ;
     }
 }
+// @media only screen and (max-width: 500px){
+//   .projects{
+//     grid-template-rows: 50% 1fr;
+//   }
+// }
