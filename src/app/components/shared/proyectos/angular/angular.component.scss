@@ -210,8 +210,14 @@ main{
       ;
     }
 }
-// @media only screen and (max-width: 500px){
-//   .projects{
-//     grid-template-rows: 50% 1fr;
-//   }
-// }
+@media only screen and (max-width: 800px){
+  .projects{
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "project1 project2"
+    "espacio2 espacio2 "
+    "espacio espacio"
+    ;
+    place-content: center;
+  }
+}
