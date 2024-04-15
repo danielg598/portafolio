@@ -1,5 +1,6 @@
 <main >
   <div class="projects">
+
     <div class="project1">
       <div class="imagen">
           <img src="assets/gifsApp.png" alt="">
@@ -41,6 +42,27 @@
           <svg (click)="filterPipe()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
       </div>
     </div>
+
+    <div class="project3">
+      <div class="imagen3">
+          <img src="assets/formApp.png" alt="">
+      </div>
+      <div class="titulos3">
+          <p>FormApp</p>
+          <p>app de formularios reactivos</p>
+      </div>
+      <div class="descripcion3">
+        Esta es una aplicación con formularios reactivos que incluyen interfaces simples, dinámicas y switches. Este enfoque mejora la interacción del usuario y la eficiencia en la gestión de datos, demostrando las capacidades avanzadas de Angular para crear soluciones sofisticadas y altamente interactivas.
+      </div>
+      <div class="btn3">
+          <button type="button" class="btn-buton2">
+              <a href="https://spontaneous-starburst-50214c.netlify.app" target="_blank">Go</a>
+          </button>
+      </div>
+      <div class="icono-modal3">
+          <svg (click)="formApp()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+      </div>
+    </div>
     <div class="espacio"></div>
     <div class="espacio2"></div>
 
@@ -52,4 +74,7 @@
 </ng-template>
 <ng-template cdk-portal #InfoAppFiltrador="cdkPortal">
   <app-filtro-app ></app-filtro-app>
+</ng-template>
+<ng-template cdk-portal #InfoAppFormApp="cdkPortal">
+  <app-form-app-modal ></app-form-app-modal>
 </ng-template>

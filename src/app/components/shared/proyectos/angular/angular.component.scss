@@ -7,7 +7,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
-    grid-template-areas: "project1 project2 espacio"
+    grid-template-areas: "project1 project2 project3"
     "espacio2 espacio2 espacio2";
     place-items: center;
     padding: 10px;
@@ -42,6 +42,21 @@ main{
   width: 100%;
   height: 100%;
 }
+.project3{
+  grid-area: project3;
+  display: grid;
+  grid-template-rows: 35% 20% 35% 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "imagen3 imagen3"
+  "titulos3 titulos3"
+  "descripcion3 descripcion3"
+  "modal3 btn3"
+  ;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+}
 .imagen{
     width: 100%;
     height: 100%;
@@ -59,6 +74,17 @@ main{
   grid-area: imagen2;
 }
 .imagen2 img{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.imagen3{
+  width: 100%;
+  height: 100%;
+  grid-area: imagen3;
+}
+.imagen3 img{
     height: 100%;
     width: 100%;
     margin: 0;
@@ -106,6 +132,27 @@ main{
     color: #2c2b2b;
     margin: 0;
 }
+.titulos3{
+  grid-area: titulos3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.titulos3 p:nth-child(1){
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+.titulos3 p:nth-child(2){
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #2c2b2b;
+    margin: 0;
+}
 .descripcion{
   grid-area: descripcion;
   padding: 5px;
@@ -121,6 +168,14 @@ main{
     font-size: 13px;
     font-weight: 300;
     color: #000;
+}
+.descripcion3{
+  grid-area: descripcion3;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
 }
 .btn{
   width: 100%;
@@ -160,6 +215,25 @@ main{
   font-weight: 500;
   text-decoration: none;
 }
+.btn3{
+  width: 100%;
+  grid-area: btn3;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-buton3{
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px 0 0 0;
+  background-color: #121212;
+}
+.btn-buton3 a{
+  color: #e6dc13;
+  font-family: "Anta", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
 .espacio{
     grid-area: espacio;
 }
@@ -184,11 +258,23 @@ main{
   fill: #121212;
   cursor: pointer;
 }
+.icono-modal3{
+  grid-area: modal3;
+  width: 25px;
+  margin-left: 5px;
+}
+.icono-modal3 svg{
+  fill: #121212;
+  cursor: pointer;
+}
 @media only screen and (max-width: 945px){
     .descripcion{
         display: none;
     }
     .descripcion2{
+      display: none;
+    }
+    .descripcion3{
       display: none;
     }
     .project1{
@@ -209,13 +295,22 @@ main{
       "modal2 btn2"
       ;
     }
+    .project3{
+      grid-template-rows: 45% 40% 15%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "imagen3 imagen3"
+      "titulos3 titulos3"
+      "modal3 btn3"
+      ;
+    }
 }
 @media only screen and (max-width: 800px){
   .projects{
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "project1 project2"
-    "espacio2 espacio2 "
+    "project3 espacio2 "
     "espacio espacio"
     ;
     place-content: center;
