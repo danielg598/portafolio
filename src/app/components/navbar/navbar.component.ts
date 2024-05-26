@@ -24,8 +24,13 @@ export class NavbarComponent implements OnInit {
         {
             label: 'Sobre mi',
             routerLink: ['sobreMi']
-            
+
         },
+        // {
+        //   label: 'pruebas',
+        //   routerLink: ['pruebas']
+
+        // },
         {
           label: 'proyectos',
           items:[

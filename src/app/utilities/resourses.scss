@@ -1,0 +1,59 @@
+.fondo_1{
+  background: linear-gradient(rgba(56, 56, 56, 0.8), rgba(134, 134, 117, 0.8)), url("../../assets/fondo2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fondo_2{
+  background: linear-gradient(rgba(163, 163, 163, 0.8), rgba(77, 77, 74, 0.8)), url("../../assets/fondo2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fondo_3{
+  background: linear-gradient(rgba(11, 11, 11, 0.8), rgba(223, 223, 221, 0.8)), url("../../assets/fondo2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.titulo_blanco{
+  font-family: "Anta", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: #d5d8dd;
+  margin: 0;
+}
+.subtitulo_blanco{
+  font-family: "Anta", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #d5d8dd;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.padding_2{
+  padding: 20px;
+}
+.marginb_2{
+  margin-bottom: 20px;
+}
+.marginb_4{
+  margin-bottom: 40px;
+}
+.marginb_6{
+  margin-bottom: 60px;
+}
+.m-right-2{
+  margin-right: 20px;
+}
+.width-img-1{
+  width: 40px;
+  height: 40px;
+}

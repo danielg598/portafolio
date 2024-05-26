@@ -1,29 +1,13 @@
-import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, NgZone, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 import { ArrayUtilities } from '../../ArrayUtilities';
+import { Settings, graficaConocimientos } from '../../interfaces/graficaConocimientos';
 
-interface Settings {
-  data: Array<Data>;
-  styles: Styles;
-  series: Series;
-  // title: string;
-  id: string;
-}
-interface Data {
-  name: string;
-  value: number;
-}
-interface Styles {
-  height: string;
-}
-interface Series {
-  labelsHidden: boolean;
-  ticksHidden: boolean;
-}
+
 
 @Component({
   selector: 'app-grafica-conocimientos',
@@ -32,7 +16,7 @@ interface Series {
   templateUrl: './grafica-conocimientos.component.html',
   styleUrl: './grafica-conocimientos.component.scss'
 })
-export class GraficaConocimientosComponent {
+export class GraficaConocimientosComponent implements OnInit, OnDestroy{
 
   @Input() chStyles!: Settings['styles'];
   @Input() chSeries!: Settings['series'];
@@ -40,6 +24,7 @@ export class GraficaConocimientosComponent {
   @Input() chData!: Settings['data'];
   @Input() chId!: Settings['id'];
   // @Input() totalRec!: number;
+  @Output() updateValor = new EventEmitter<Event>();
 
   public root!: am5.Root;
   public chart!: am5xy.XYChart;
@@ -61,9 +46,39 @@ export class GraficaConocimientosComponent {
     }
   };
 
-  constructor() { }
+  constructor(private zone: NgZone) { }
+
+  ngOnDestroy(): void {
+    if (this.root) {
+      this.root.dispose();
+    }
+  }
 
   ngOnInit(): void {
+    const { id } = this.settings;
+    // Asegúrate de que el código se ejecuta en el navegador
+    if (typeof window !== 'undefined') {
+      this.zone.runOutsideAngular(() => {
+        // Create root element
+        let root = am5.Root.new(id);
+
+        // Set themes
+        root.setThemes([
+          am5themes_Animated.new(root)
+        ]);
+
+        // Create chart
+        let chart = root.container.children.push(am5xy.XYChart.new(root, {
+          panX: true,
+          panY: true,
+          wheelX: "panX",
+          wheelY: "zoomX",
+          pinchZoomX:true
+        }));
+
+        this.root = root;
+      });
+    }
   }
 
   ngAfterViewInit(): void {
@@ -121,7 +136,7 @@ export class GraficaConocimientosComponent {
     this.cursor = this.chart.set("cursor", am5xy.XYCursor.new(this.root, {}));
     this.cursor.lineY.set("visible", false);
 
-    this.xRenderer = am5xy.AxisRendererX.new(this.root, { 
+    this.xRenderer = am5xy.AxisRendererX.new(this.root, {
       minGridDistance: 30,
       minorGridEnabled: true
     });
@@ -154,7 +169,7 @@ export class GraficaConocimientosComponent {
       valueYField: "value",
       sequencedInterpolation: true,
       categoryXField: "name",
-      tooltip: am5.Tooltip.new(this.root, { 
+      tooltip: am5.Tooltip.new(this.root, {
         labelText: `[bold]{valueY}[/]\% `
       })
     }));
@@ -164,7 +179,27 @@ export class GraficaConocimientosComponent {
       cornerRadiusTR: 5,
       strokeOpacity: 0
     });
-    
+
+    const valor = (value:any) =>{
+      this.updateValor.emit(value);
+    }
+
+    this.series.columns.template.events.on('click',function(event){
+      const data = (event.target.dataItem?.dataContext as graficaConocimientos).number;
+      // console.log(data, "nombre de cada grafica");
+      valor(data)
+    })
+
+    this.series.columns.template.events.on('pointerover',function(event){
+      event.target.set("cursorOverStyle", "pointer");
+    })
+
+
+
+    // this.series.columns.template.events.on('pointerout',function(event){
+    //   event.target.set("cursorOverStyle", "default");
+    // })
+
     // this.series.columns.template.adapters.add("fill", (fill, target) => {
     //   return this.chart.get("colors")?.getIndex(this.series.columns.indexOf(target));
     // });
@@ -172,13 +207,13 @@ export class GraficaConocimientosComponent {
     this.series.columns.template.adapters.add("fill",  (fill, target) => {
       return this.chart.get("colors")?.getIndex(this.series.columns.indexOf(target)%3);
     });
-  
+
     this.chart.get("colors")?.set("colors", [
       am5.color("#383838"),
       am5.color("#a3a3a3"),
       am5.color("#0b0b0b")
     ]);
-    
+
     this.series.columns.template.adapters.add("stroke", (stroke, target) => {
       return this.chart.get("colors")?.getIndex(this.series.columns.indexOf(target));
     });
@@ -191,7 +226,7 @@ export class GraficaConocimientosComponent {
           width: 50,
           height: 50,
           centerX: am5.p50,
-          centerY: am5.p50,
+          centerY: am5.p100,
           shadowColor: am5.color(0x000000),
           shadowBlur: 4,
           shadowOffsetX: 4,

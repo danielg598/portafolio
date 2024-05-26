@@ -10,16 +10,43 @@
         <div class="estudio1">
             <p >Soy Tecnólogo Profesional en Desarrollo de Software con énfasis en aplicaciones web, egresado de la reconocida Institución Universitaria Pascual Bravo. Mi formación académica y experiencia en el campo me han dotado de sólidos conocimientos en el diseño, implementación y mantenimiento de soluciones tecnológicas innovadoras. A lo largo de mi trayectoria educativa, he cultivado habilidades especializadas que me permiten abordar desafíos complejos en el desarrollo de software, con un enfoque particular en aplicaciones web de última generación.</p>
         </div>
-       
+
     </div>
-    <div class="grafica_container">
-        <div class="titulo_grafica"><p>Porcentaje en conocimientos</p></div>
-        <div class="grafica">
-            <app-grafica-conocimientos [chId]="'chartConocimientos'" [chData]="data" [chStyles]="{ height: '100%' }"></app-grafica-conocimientos>
-        </div>
-        
+    <div class="conocimientos_container">
+
+      <div class="grafica_container">
+          <div class="titulo_grafica"><p>Porcentaje en conocimientos</p></div>
+          <div class="grafica">
+            <app-grafica-conocimientos [chId]="'chartConocimientos'" [chData]="data" (updateValor)="changeData($event)" [chStyles]="{ height: '100%' }"></app-grafica-conocimientos>
+          </div>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_1" *ngIf="select===1">
+        <app-angular-conocimientos></app-angular-conocimientos>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_2" *ngIf="select===2">
+        <app-node-conocimientos></app-node-conocimientos>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_3" *ngIf="select===3">
+        <app-nest-conocimientos></app-nest-conocimientos>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_1" *ngIf="select===4">
+        <app-react-conocimientos></app-react-conocimientos>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_2" *ngIf="select===5">
+        <app-my-sql-conocimientos></app-my-sql-conocimientos>
+      </div>
+
+      <div class="descripcion_conocimientos fondo_3" *ngIf="select===6">
+        <app-laravel-conocimientos></app-laravel-conocimientos>
+      </div>
+
     </div>
-    
-    
-    
+
+
+
 </main>
