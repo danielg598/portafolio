@@ -166,6 +166,12 @@ body{
             "container_principal container_principal container_principal container_principal container_principal container_principal"
             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
     }
+    .conocimientos_container{
+      flex-direction: column;
+    }
+    .descripcion_conocimientos{
+      width: 100%;
+    }
     .descripcion p{
         font-size: 45px;
     }
