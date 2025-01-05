@@ -13,11 +13,10 @@ import { ReactConocimientosComponent } from './utilities/react-conocimientos/rea
 import { LaravelConocimientosComponent } from './utilities/laravel-conocimientos/laravel-conocimientos.component';
 
 @Component({
-  selector: 'app-perfil',
-  standalone: true,
-  imports: [CardModule, PortalModule, DragDropModule,CommonModule, GraficaConocimientosComponent,AngularConocimientosComponent,NodeConocimientosComponent, NestConocimientosComponent, MySqlConocimientosComponent, ReactConocimientosComponent, LaravelConocimientosComponent],
-  templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.scss',"../../../utilities/resourses.scss"]
+    selector: 'app-perfil',
+    imports: [CardModule, PortalModule, DragDropModule, CommonModule, GraficaConocimientosComponent, AngularConocimientosComponent, NodeConocimientosComponent, NestConocimientosComponent, MySqlConocimientosComponent, ReactConocimientosComponent, LaravelConocimientosComponent],
+    templateUrl: './perfil.component.html',
+    styleUrls: ['./perfil.component.scss', "../../../utilities/resourses.scss"]
 })
 export class PerfilComponent implements OnInit{
   // @ViewChild('angular', { static: true }) angular!: TemplateRef<any>;

@@ -10,11 +10,10 @@ import { Settings, graficaConocimientos } from '../../interfaces/graficaConocimi
 
 
 @Component({
-  selector: 'app-grafica-conocimientos',
-  standalone: true,
-  imports: [],
-  templateUrl: './grafica-conocimientos.component.html',
-  styleUrl: './grafica-conocimientos.component.scss'
+    selector: 'app-grafica-conocimientos',
+    imports: [],
+    templateUrl: './grafica-conocimientos.component.html',
+    styleUrl: './grafica-conocimientos.component.scss'
 })
 export class GraficaConocimientosComponent implements OnInit, OnDestroy{
 

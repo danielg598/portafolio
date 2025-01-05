@@ -8,17 +8,16 @@ import { any } from '@amcharts/amcharts5/.internal/core/util/Array';
 import { map } from 'rxjs';
 
 @Component({
-  selector: 'app-pruebas',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-  ],
-  providers:[
-    HttpClientModule
-  ],
-  templateUrl: './pruebas.component.html',
-  styleUrl: './pruebas.component.scss'
+    selector: 'app-pruebas',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+    ],
+    providers: [
+        HttpClientModule
+    ],
+    templateUrl: './pruebas.component.html',
+    styleUrl: './pruebas.component.scss'
 })
 
 export class PruebasComponent implements OnInit,AfterViewInit,OnChanges{

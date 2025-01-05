@@ -7,16 +7,15 @@ import { FiltroAppComponent } from '../../../../utilities/Modales/filtro-app/fil
 import { FormAppModalComponent } from '../../../../utilities/Modales/form-app-modal/form-app-modal.component';
 
 @Component({
-  selector: 'app-angular',
-  standalone: true,
-  imports: [
-    AngularInfoAppGiffsComponent,
-    FiltroAppComponent,
-    FormAppModalComponent,
-    PortalModule
-  ],
-  templateUrl: './angular.component.html',
-  styleUrl: './angular.component.scss'
+    selector: 'app-angular',
+    imports: [
+        AngularInfoAppGiffsComponent,
+        FiltroAppComponent,
+        FormAppModalComponent,
+        PortalModule
+    ],
+    templateUrl: './angular.component.html',
+    styleUrl: './angular.component.scss'
 })
 export class AngularComponent {
 
