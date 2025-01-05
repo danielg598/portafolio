@@ -33,9 +33,9 @@ $portafolio-temp-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($portafolio-temp-theme);
 
-@import "../node_modules/primeng/resources/primeng.min.css";
-@import "../node_modules/primeflex/primeflex.scss";
-@import "../node_modules/primeicons/primeicons.css";
+// @import "../node_modules/primeng/resources/primeng.min.css";
+// @import "../node_modules/primeflex/primeflex.scss";
+// @import "../node_modules/primeicons/primeicons.css";
 @import '@angular/cdk/overlay-prebuilt.css';
 
 // @tailwind base;
@@ -52,6 +52,7 @@ body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .custom-overlay-backdrop {
   background-color: rgba(0, 0, 0, 0.7); // Ajusta la opacidad y el color según tus preferencias
 }
