@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Inject, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ApiPruebaService } from '../../../../utilities/services/api-prueba.service';
-import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { apiService } from '../../../../utilities/services/service.service';
 import { RouterOutlet } from '@angular/router';
