@@ -3,7 +3,8 @@ import { PerfilComponent } from '../perfil/perfil.component';
 
 @Component({
     selector: 'app-experiencia',
-    imports: [PerfilComponent],
+    standalone: true,
+    // imports: [PerfilComponent],
     templateUrl: './experiencia.component.html',
     styleUrl: './experiencia.component.scss'
 })

@@ -9,12 +9,12 @@ import { map } from 'rxjs';
 
 @Component({
     selector: 'app-pruebas',
-    imports: [
-        CommonModule,
-        RouterOutlet,
-    ],
+    // imports: [
+    //     CommonModule,
+    //     RouterOutlet,
+    // ],
     providers: [
-        HttpClientModule
+        // HttpClientModule
     ],
     templateUrl: './pruebas.component.html',
     styleUrl: './pruebas.component.scss'
