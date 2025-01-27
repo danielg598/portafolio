@@ -1,4 +1,88 @@
-<main class="container">
+<div class="grid grid-cols-4 gap-4">
+  <div class="col-span-4 descripcion">
+    <p>"Soy un apasionado por la programación, <span class="highlight">persigo diariamente mi sueño de convertirme en un
+        destacado desarrollador</span>."
+    </p>
+  </div>
+  <div class="grid grid-cols-4 gap-6 col-span-4">
+    <div class="foto_portafolio col-span-2">
+      <img src="assets/perfil_portafolio_editado.png" alt="">
+    </div>
+    <div class="col-span-2 flex flex-col space-y-16 ">
+      <div class="titulo ">
+        <p>Perfil profesional</p>
+      </div>
+      <div class="contenidoTexto">
+        <p>Soy Tecnólogo Profesional en Desarrollo de Software con énfasis en aplicaciones web, egresado de la
+          reconocida Institución Universitaria Pascual Bravo. Mi formación académica y experiencia en el campo me han
+          dotado de sólidos conocimientos en el diseño, implementación y mantenimiento de soluciones tecnológicas
+          innovadoras. A lo largo de mi trayectoria educativa, he cultivado habilidades especializadas que me permiten
+          abordar desafíos complejos en el desarrollo de software, con un enfoque particular en aplicaciones web de
+          última generación.</p>
+      </div>
+      <div class="contenidoTexto">
+        <p>
+          Siempre busco ser un mejor desarrollador de software, dedicando tiempo a estudiar nuevas tecnologías y
+          mantenerme actualizado en las tendencias del sector. Creo en la importancia de la mejora continua, por lo que
+          me esfuerzo cada día en capacitarme, perfeccionar mis habilidades y optimizar mi forma de trabajar para ser
+          más rápido, eficiente y ofrecer soluciones de mayor calidad.</p>
+      </div>
+      <div class="titulo ">
+        <p>Conocimientos y fortalezas</p>
+      </div>
+      <div class="grid grid-cols-3 gap-2 p-[10px]">
+        <!-- <div class="col-span-1 containerConocimientos">
+          <p >angular</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p >Flutter</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>React</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>Nest js</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>.NET CORE</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>Machine Learning</p>
+        </div> -->
+        @for (item of conocimientos; track $index) {
+        <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
+          <p>{{item.nombre}}</p>
+        </div>
+        }
+
+      </div>
+      <div class="titulo ">
+        <p>Experiencia laboral</p>
+      </div>
+      <div class="grid grid-cols-4 gap-2 p-[10px]">
+
+        @for (item of experiencia; track $index) {
+        <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
+          <p>{{item.nombre}}</p>
+        </div>
+        }
+      </div>
+      <!-- <div class="grid grid-cols-4 gap-2 p-[10px]">
+        <div class="col-span-1 containerConocimientos">
+          <p>Distribuidora Pasteur</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>Garantías comunitarias</p>
+        </div>
+        <div class="col-span-1 containerConocimientos">
+          <p>Confiar cooperativa financiera</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <main class="container">
     <div class="descripcion">
         <p >"Soy un apasionado por la programación, <span class="highlight">persigo diariamente mi sueño de convertirme en un destacado desarrollador</span>."</p>
     </div>
@@ -49,4 +133,4 @@
 
 
 
-</main>
+</main> -->

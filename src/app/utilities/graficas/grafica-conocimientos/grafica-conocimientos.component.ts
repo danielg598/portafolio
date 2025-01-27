@@ -11,6 +11,7 @@ import { Settings, graficaConocimientos } from '../../interfaces/graficaConocimi
 
 @Component({
     selector: 'app-grafica-conocimientos',
+    standalone:true,
     imports: [],
     templateUrl: './grafica-conocimientos.component.html',
     styleUrl: './grafica-conocimientos.component.scss'

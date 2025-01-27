@@ -3,3 +3,13 @@
     top: 0;
     width: 100%;
 }
+.p-menubar {
+    display: flex;
+    align-items: center;
+    background: var(--p-menubar-background);
+    /* border: 1px solid var(--p-menubar-border-color); */
+    /* border-radius: var(--p-menubar-border-radius); */
+    color: var(--p-menubar-color);
+    /* padding: var(--p-menubar-padding); */
+    gap: var(--p-menubar-gap);
+}

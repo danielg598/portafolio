@@ -30,15 +30,15 @@ export class NavbarComponent implements OnInit {
         //   routerLink: ['pruebas']
 
         // },
-        {
-          label: 'proyectos',
-          items:[
-            {
-              label:'Angular',
-              routerLink:['angular']
-            }
-          ]
-        }
+        // {
+        //   label: 'proyectos',
+        //   items:[
+        //     {
+        //       label:'Angular',
+        //       routerLink:['angular']
+        //     }
+        //   ]
+        // }
     ];
   }
 }

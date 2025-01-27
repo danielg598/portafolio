@@ -11,9 +11,11 @@ import { NestConocimientosComponent } from './utilities/nest-conocimientos/nest-
 import { MySqlConocimientosComponent } from './utilities/my-sql-conocimientos/my-sql-conocimientos.component';
 import { ReactConocimientosComponent } from './utilities/react-conocimientos/react-conocimientos.component';
 import { LaravelConocimientosComponent } from './utilities/laravel-conocimientos/laravel-conocimientos.component';
+import { Router} from '@angular/router';
 
 @Component({
     selector: 'app-perfil',
+    standalone:true,
     imports: [CardModule, PortalModule, DragDropModule, CommonModule, GraficaConocimientosComponent, AngularConocimientosComponent, NodeConocimientosComponent, NestConocimientosComponent, MySqlConocimientosComponent, ReactConocimientosComponent, LaravelConocimientosComponent],
     templateUrl: './perfil.component.html',
     styleUrls: ['./perfil.component.scss', "../../../utilities/resourses.scss"]
@@ -22,58 +24,77 @@ export class PerfilComponent implements OnInit{
   // @ViewChild('angular', { static: true }) angular!: TemplateRef<any>;
 
 
-  select:any;
+  // select:any;
 
-  data:graficaConocimientos[] = [
-    {
-      name: "Angular",
-      value: 80,
-      bulletSettings: { src: "../../../../assets/angular.png" },
-      number:1
-    },
-    {
-      name: "Node js",
-      value: 40,
-      bulletSettings: { src: "../../../../assets/node.png" },
-      number:2
-    },
-    {
-      name: "nest js",
-      value: 80,
-      bulletSettings: { src: "../../../../assets/nest.png" },
-      number:3
-    },
-    {
-      name: "React",
-      value: 45,
-      bulletSettings: { src: "../../../../assets/react.png" },
-      number:4
-    },
-    {
-      name: "sql",
-      value: 70,
-      bulletSettings: { src: "../../../../assets/sql.png" },
-      number:5
-    },
-    {
-      name: "laravel",
-      value: 85,
-      bulletSettings: { src: "../../../../assets/laravel.png" },
-      number:6
-    }
-  ];
+  // data:graficaConocimientos[] = [
+  //   {
+  //     name: "Angular",
+  //     value: 80,
+  //     bulletSettings: { src: "../../../../assets/angular.png" },
+  //     number:1
+  //   },
+  //   {
+  //     name: "Node js",
+  //     value: 40,
+  //     bulletSettings: { src: "../../../../assets/node.png" },
+  //     number:2
+  //   },
+  //   {
+  //     name: "nest js",
+  //     value: 80,
+  //     bulletSettings: { src: "../../../../assets/nest.png" },
+  //     number:3
+  //   },
+  //   {
+  //     name: "React",
+  //     value: 45,
+  //     bulletSettings: { src: "../../../../assets/react.png" },
+  //     number:4
+  //   },
+  //   {
+  //     name: "sql",
+  //     value: 70,
+  //     bulletSettings: { src: "../../../../assets/sql.png" },
+  //     number:5
+  //   },
+  //   {
+  //     name: "laravel",
+  //     value: 85,
+  //     bulletSettings: { src: "../../../../assets/laravel.png" },
+  //     number:6
+  //   }
+  // ];
 
-  constructor(private cd: ChangeDetectorRef){}
+  conocimientos: any=[
+    { ruta: 'angular', nombre: 'Angular'},
+    { ruta: 'Flutter', nombre: 'Flutter'},
+    { ruta: 'React', nombre: 'React'},
+    { ruta: 'Java', nombre: 'Java'},
+    { ruta: 'Nest', nombre: 'Nest js'},
+    { ruta: 'NETCORE', nombre: '.NET CORE'},
+    { ruta: 'MachineLearning', nombre: 'Machine Learning'}
+  ]
+  experiencia: any=[
+    { ruta: 'pasteur', nombre: 'Distribuidora pasteur'},
+    { ruta: 'garantiasComunitarias', nombre: 'Garantías comunitarias'},
+    { ruta: 'confiarCooperativa', nombre: 'Confiar cooperativa financiera'}
+  ]
+  constructor(private router: Router){}
 
   ngOnInit() {
-    this.select = 1;
+    // this.select = 1;
   }
 
-  changeData(value:any){
-    this.select = value;
-    this.cd.detectChanges();
-    console.log(this.select = value, "dato seleccionado en el output");
+  // changeData(value:any){
+  //   this.select = value;
+  //   this.cd.detectChanges();
+  //   console.log(this.select = value, "dato seleccionado en el output");
 
+  // }
+
+  navigateTo(ruta:string){
+    this.router.navigate([ruta]);
   }
+
 
 }
