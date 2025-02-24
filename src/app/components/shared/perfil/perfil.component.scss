@@ -1,62 +1,9 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
-
-// .container{
-//     display: grid;
-//     grid-template-columns: repeat(6,1fr);
-//     grid-template-rows: 40% 30% 40%;
-//     grid-template-areas:
-//     "descripcion descripcion descripcion descripcion descripcion descripcion"
-//     "container_principal container_principal container_principal container_principal container_principal container_principal"
-//     "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-// }
-// .container_principal{
-//     display: grid;
-//     grid-area: container_principal;
-//     grid-template-columns: repeat(8,1fr);
-//     grid-template-rows: 15% 25% 45%;
-//     gap: 20px;
-//     grid-template-areas:
-//     "foto_portafolio foto_portafolio foto_portafolio foto_portafolio titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
-//     "foto_portafolio foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1"
-//     "foto_portafolio foto_portafolio foto_portafolio foto_portafolio estudio1 estudio1 estudio1 estudio1"
-//     ;
-//     background: linear-gradient(rgba(239, 239, 235, 0.8), rgba(239, 239, 235, 0.8)), url('../../../../assets/fondo2.png');
-//     background-size: cover;
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-color: #fafafa;
-// }
-// .conocimientos_container{
-//   display: flex;
-//   grid-area: grafica_container;
-// }
-// .grafica_container{
-//     width: 100%;
-//     height: 100%;
-//     display: grid;
-//     grid-template-columns: repeat(8,1fr);
-//     grid-template-rows: 15% 80%;
-//     grid-template-areas:
-//     "titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica titulo_grafica"
-//     "grafica grafica grafica grafica grafica grafica grafica grafica";
-//     background-color: #fafafa;
-// }
-// .grafica{
-//     height: 100%;
-//     width: 100%;
-//     grid-area: grafica;
-// }
-// .descripcion{
-//     grid-area: descripcion;
-//     margin-top: 57px;
-//     display: flex;
-//     align-items: center;
-// }
 .descripcion p {
-    color: #fafafa;
+    color: #161613;
     font-size: 75px;
     font-family: "Bebas Neue", sans-serif;
     line-height: 1.5;
@@ -68,10 +15,6 @@ body {
     padding-left: 20px;
     margin: 0;
 }
-
-// .descripcion_conocimientos{
-//   width: 50%;
-// }
 .highlight {
     font-size: 75px;
     font-weight: bold;
@@ -79,13 +22,6 @@ body {
     color: #5f5f63;
     animation: scaleText 2.5s infinite alternate;
 }
-
-// .foto_portafolio{
-//     grid-area: foto_portafolio;
-//     display: flex;
-//     justify-content: center;
-//     // position: relative;
-// }
 .foto_portafolio img {
     object-fit: cover;
     width: 100%;
@@ -94,34 +30,17 @@ body {
     /* display: block; */
     padding: 10px;
 }
-
-// .titulo_grafica{
-//     grid-area: titulo_grafica;
-//     display: flex;
-//     justify-content: center;
-// }
-// .titulo_grafica p{
-//     font-family: "Anta", sans-serif;
-//     font-weight: 700;
-//     font-size: 35px;
-//     color: #374151;
-//     margin: 0;
-// }
-// .titulo_estudio1{
-//     grid-area: titulo_estudio1;
-// }
 .titulo p {
     font-family: "Anta", sans-serif;
     font-weight: 700;
     font-size: 35px;
-    color: #fafafa;
+    color: #161613;
 }
 
 .containerConocimientos {
     background: #5f5f63;
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente */
     align-items: center;
 }
 
@@ -132,81 +51,10 @@ body {
     color: #fafafa;
     text-align: center;
 }
-
-// .estudio1{
-//     grid-area: estudio1;
-// }
 .contenidoTexto p {
     font-family: "Anta", sans-serif;
     font-weight: 500;
     font-size: 15px;
-    color: #a9aeb5;
+    color: #414142;
     line-height: 2;
 }
-
-// @media only screen and (max-width: 2100px){
-//     .container{
-//         grid-template-rows: 40% 30% 30%;
-//         grid-template-areas:
-//             "descripcion descripcion descripcion descripcion descripcion descripcion"
-//             "container_principal container_principal container_principal container_principal container_principal container_principal"
-//             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-//     }
-// }
-// @media only screen and (max-width: 1200px){
-//     .container{
-//         grid-template-rows: 35% 65% 40%;
-//         grid-template-areas:
-//             "descripcion descripcion descripcion descripcion descripcion descripcion"
-//             "container_principal container_principal container_principal container_principal container_principal container_principal"
-//             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-//     }
-// }
-// @media only screen and (max-width: 1100px){
-//     .container{
-//         grid-template-rows: 45% 65% 45%;
-//         grid-template-areas:
-//             "descripcion descripcion descripcion descripcion descripcion descripcion"
-//             "container_principal container_principal container_principal container_principal container_principal container_principal"
-//             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-//     }
-// }
-// @media only screen and (max-width: 868px){
-//     .container{
-//         grid-template-rows: 55% 65% 45%;
-//         grid-template-areas:
-//             "descripcion descripcion descripcion descripcion descripcion descripcion"
-//             "container_principal container_principal container_principal container_principal container_principal container_principal"
-//             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-//     }
-// }
-// @media only screen and (max-width: 500px){
-//     .container{
-//         grid-template-rows: 35% 80% 45%;
-//         grid-template-areas:
-//             "descripcion descripcion descripcion descripcion descripcion descripcion"
-//             "container_principal container_principal container_principal container_principal container_principal container_principal"
-//             "grafica_container grafica_container grafica_container grafica_container grafica_container grafica_container";
-//     }
-//     .conocimientos_container{
-//       flex-direction: column;
-//     }
-//     .descripcion_conocimientos{
-//       width: 100%;
-//     }
-//     .descripcion p{
-//         font-size: 45px;
-//     }
-//     .highlight{
-//         font-size: 45px;
-//     }
-//     .container_principal{
-//         grid-template-columns: repeat(4,1fr);
-//         grid-template-rows: 5% 60% 35%;
-//         grid-template-areas:
-//         "titulo_estudio1 titulo_estudio1 titulo_estudio1 titulo_estudio1"
-//         "foto_portafolio foto_portafolio foto_portafolio foto_portafolio"
-//         "estudio1 estudio1 estudio1 estudio1"
-//         ;
-//     }
-// }

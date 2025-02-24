@@ -1,1 +1,19 @@
-<p>pasteur works!</p>
+<div class="flex flex-col">
+    <div class="grid grid-cols-9 gap-4">
+        <div class="col-span-3 flex justify-center items-center logo">
+            <img src="../../../../../assets/pasteur.png" alt="">
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Inicio</p>
+            <p>21 de diciembre del 2022</p>
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Finalizacion</p>
+            <p>18 de julio del 2023</p>
+            <!-- <p-button label="Submit" /> -->
+        </div>
+    </div>
+
+    <app-tabla [columns]="columns" [data]="data"></app-tabla>
+    
+</div>

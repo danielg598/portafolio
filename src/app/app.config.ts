@@ -6,7 +6,8 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { providePrimeNG } from 'primeng/config';
-import lara  from '@primeng/themes/lara';
+import Aura  from '@primeng/themes/aura';
+import {Noir} from "../mypreset";
 
 
 export const appConfig: ApplicationConfig = {
@@ -15,10 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(), 
     provideAnimationsAsync(),
     provideHttpClient(withFetch()),
-    providePrimeNG({
-      theme: {
-          preset: lara
-      }
-  })
+    providePrimeNG({ theme: { preset: Noir }})
   ]
 };

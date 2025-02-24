@@ -48,22 +48,43 @@ body{
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: black;
+  background-color: ffffff;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.p-menubar {
-  display: flex;
-  align-items: center;
-  background: var(--p-menubar-background);
-  border: none !important;
-  border-radius: 0% !important;
-  color: var(--p-menubar-color);
-  padding: 0% !important;
-  gap: var(--p-menubar-gap);
+:host ::ng-deep {
+  .p-menubar-item:not(.p-disabled) > .p-menubar-item-content:hover{
+      background-color: #939191 !important;
+      color: purple;
+  }
+  .p-menubar-item-content{
+      color: purple;
+  }
+  .p-menubar-item-label{
+    color: purple;
+  }
 }
 
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// .p-menubar {
+//   display: flex;
+//   align-items: center;
+//   background: var(--p-menubar-background);
+//   border: none !important;
+//   border-radius: 0% !important;
+//   color: var(--p-menubar-color);
+//   padding: 0% !important;
+//   gap: var(--p-menubar-gap);
+// }
+.p-menubar{
+  background: #f1f5f9 !important;
+  border-radius: 0% !important;
+}
+.p-menubar-item-label{
+  color: #000 !important;
+  font-size: larger !important;
+}
 .custom-overlay-backdrop {
   background-color: rgba(0, 0, 0, 0.7); // Ajusta la opacidad y el color según tus preferencias
 }

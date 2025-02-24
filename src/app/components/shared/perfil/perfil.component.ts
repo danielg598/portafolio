@@ -12,11 +12,12 @@ import { MySqlConocimientosComponent } from './utilities/my-sql-conocimientos/my
 import { ReactConocimientosComponent } from './utilities/react-conocimientos/react-conocimientos.component';
 import { LaravelConocimientosComponent } from './utilities/laravel-conocimientos/laravel-conocimientos.component';
 import { Router} from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
     selector: 'app-perfil',
     standalone:true,
-    imports: [CardModule, PortalModule, DragDropModule, CommonModule, GraficaConocimientosComponent, AngularConocimientosComponent, NodeConocimientosComponent, NestConocimientosComponent, MySqlConocimientosComponent, ReactConocimientosComponent, LaravelConocimientosComponent],
+    imports: [CardModule, PortalModule, DragDropModule, CommonModule, ButtonModule, GraficaConocimientosComponent, AngularConocimientosComponent, NodeConocimientosComponent, NestConocimientosComponent, MySqlConocimientosComponent, ReactConocimientosComponent, LaravelConocimientosComponent],
     templateUrl: './perfil.component.html',
     styleUrls: ['./perfil.component.scss', "../../../utilities/resourses.scss"]
 })

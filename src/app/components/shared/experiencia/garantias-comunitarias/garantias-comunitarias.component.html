@@ -1,1 +1,18 @@
-<p>garantias-comunitarias works!</p>
+<div class="flex flex-col">
+    <div class="grid grid-cols-9 gap-4">
+        <div class="col-span-3 flex justify-center items-center logo">
+            <img src="../../../../../assets/garantiasComunitarias.jpeg" alt="">
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Inicio</p>
+            <p>02 de noviembre del 2023</p>
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Finalizacion</p>
+            <p>23 de septiembre del 2024</p>
+        </div>
+    </div>
+
+    <app-tabla [columns]="columns" [data]="data"></app-tabla>
+    
+</div>

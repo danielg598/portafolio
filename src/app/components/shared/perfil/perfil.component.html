@@ -1,14 +1,14 @@
 <div class="grid grid-cols-4 gap-4">
-  <div class="col-span-4 descripcion">
+  <div id="sobreMi" class="col-span-4 descripcion hidden md:block">
     <p>"Soy un apasionado por la programación, <span class="highlight">persigo diariamente mi sueño de convertirme en un
         destacado desarrollador</span>."
     </p>
   </div>
   <div class="grid grid-cols-4 gap-6 col-span-4">
-    <div class="foto_portafolio col-span-2">
+    <div id="imagen" class="foto_portafolio col-span-2 hidden md:block">
       <img src="assets/perfil_portafolio_editado.png" alt="">
     </div>
-    <div class="col-span-2 flex flex-col space-y-16 ">
+    <div id="perfil" class="col-span-4 md:col-span-2 flex flex-col space-y-16">
       <div class="titulo ">
         <p>Perfil profesional</p>
       </div>
@@ -31,28 +31,12 @@
         <p>Conocimientos y fortalezas</p>
       </div>
       <div class="grid grid-cols-3 gap-2 p-[10px]">
-        <!-- <div class="col-span-1 containerConocimientos">
-          <p >angular</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p >Flutter</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>React</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>Nest js</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>.NET CORE</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>Machine Learning</p>
-        </div> -->
+
         @for (item of conocimientos; track $index) {
-        <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
+          <p-button [disabled]="true" class="col-span-1" (click)="navigateTo(item.ruta)" label="{{item.nombre}}" />
+        <!-- <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
           <p>{{item.nombre}}</p>
-        </div>
+        </div> -->
         }
 
       </div>
@@ -62,75 +46,12 @@
       <div class="grid grid-cols-4 gap-2 p-[10px]">
 
         @for (item of experiencia; track $index) {
-        <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
+          <p-button class="col-span-1 " (click)="navigateTo(item.ruta)" label="{{item.nombre}}" />
+        <!-- <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
           <p>{{item.nombre}}</p>
-        </div>
+        </div> -->
         }
       </div>
-      <!-- <div class="grid grid-cols-4 gap-2 p-[10px]">
-        <div class="col-span-1 containerConocimientos">
-          <p>Distribuidora Pasteur</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>Garantías comunitarias</p>
-        </div>
-        <div class="col-span-1 containerConocimientos">
-          <p>Confiar cooperativa financiera</p>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
-
-<!-- <main class="container">
-    <div class="descripcion">
-        <p >"Soy un apasionado por la programación, <span class="highlight">persigo diariamente mi sueño de convertirme en un destacado desarrollador</span>."</p>
-    </div>
-    <div class="container_principal">
-        <div class="foto_portafolio">
-            <img src="assets/perfil_portafolio_editado.png" alt="">
-        </div>
-        <div class="titulo_estudio1"><p>Desarrollador de software</p></div>
-        <div class="estudio1">
-            <p >Soy Tecnólogo Profesional en Desarrollo de Software con énfasis en aplicaciones web, egresado de la reconocida Institución Universitaria Pascual Bravo. Mi formación académica y experiencia en el campo me han dotado de sólidos conocimientos en el diseño, implementación y mantenimiento de soluciones tecnológicas innovadoras. A lo largo de mi trayectoria educativa, he cultivado habilidades especializadas que me permiten abordar desafíos complejos en el desarrollo de software, con un enfoque particular en aplicaciones web de última generación.</p>
-        </div>
-
-    </div>
-    <div class="conocimientos_container">
-
-      <div class="grafica_container">
-          <div class="titulo_grafica"><p>Porcentaje en conocimientos</p></div>
-          <div class="grafica">
-            <app-grafica-conocimientos [chId]="'chartConocimientos'" [chData]="data" (updateValor)="changeData($event)" [chStyles]="{ height: '100%' }"></app-grafica-conocimientos>
-          </div>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_1" *ngIf="select===1">
-        <app-angular-conocimientos></app-angular-conocimientos>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_2" *ngIf="select===2">
-        <app-node-conocimientos></app-node-conocimientos>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_3" *ngIf="select===3">
-        <app-nest-conocimientos></app-nest-conocimientos>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_1" *ngIf="select===4">
-        <app-react-conocimientos></app-react-conocimientos>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_2" *ngIf="select===5">
-        <app-my-sql-conocimientos></app-my-sql-conocimientos>
-      </div>
-
-      <div class="descripcion_conocimientos fondo_3" *ngIf="select===6">
-        <app-laravel-conocimientos></app-laravel-conocimientos>
-      </div>
-
-    </div>
-
-
-
-</main> -->

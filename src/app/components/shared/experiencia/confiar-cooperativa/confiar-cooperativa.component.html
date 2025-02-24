@@ -1,1 +1,18 @@
-<p>confiar-cooperativa works!</p>
+<div class="flex flex-col">
+    <div class="grid grid-cols-9 gap-4">
+        <div class="col-span-3 flex justify-center items-center logo">
+            <img src="../../../../../assets/confiar.png" alt="">
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Inicio</p>
+            <p>15 de octubre del 2024</p>
+        </div>
+        <div class="col-span-3 flex justify-center  items-center flex-col">
+            <p>Actualmente en la compañía </p>
+            <!-- <p>23 de septiembre del 2024</p> -->
+        </div>
+    </div>
+
+    <app-tabla [columns]="columns" [data]="data"></app-tabla>
+    
+</div>
