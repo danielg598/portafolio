@@ -33,10 +33,7 @@
       <div class="grid grid-cols-3 gap-2 p-[10px]">
 
         @for (item of conocimientos; track $index) {
-          <p-button [disabled]="true" class="col-span-1" (click)="navigateTo(item.ruta)" label="{{item.nombre}}" />
-        <!-- <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
-          <p>{{item.nombre}}</p>
-        </div> -->
+          <p-button [disabled]="item.disable" class="sm:col-span-1 col-span-3 w-auto" (click)="navigateTo(item)" label="{{item.nombre}}" />
         }
 
       </div>
@@ -46,10 +43,7 @@
       <div class="grid grid-cols-4 gap-2 p-[10px]">
 
         @for (item of experiencia; track $index) {
-          <p-button class="col-span-1 " (click)="navigateTo(item.ruta)" label="{{item.nombre}}" />
-        <!-- <div class="col-span-1 containerConocimientos" (click)="navigateTo(item.ruta)" style="cursor: pointer;">
-          <p>{{item.nombre}}</p>
-        </div> -->
+          <p-button class="sm:col-span-1 col-span-3" (click)="navigateTo(item)" label="{{item.nombre}}" />
         }
       </div>
     </div>

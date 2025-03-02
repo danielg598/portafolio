@@ -1,62 +1,63 @@
 main{
-    position: fixed;
-    top: 200px;
+  min-height: 100vh;
+  height: auto;
+  overflow: auto;
 }
-.projects{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    grid-template-areas: "project1 project2 project3"
-    "espacio2 espacio2 espacio2";
-    place-items: center;
-    padding: 10px;
-}
-.project1{
-    grid-area: project1;
-    display: grid;
-    grid-template-rows: 35% 20% 35% 10%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "imagen imagen"
-    "titulos titulos"
-    "descripcion descripcion"
-    "modal btn"
-    ;
-    background-color: #fafafa;
-    width: 100%;
-    height: 100%;
-}
-.project2{
-  grid-area: project2;
-  display: grid;
-  grid-template-rows: 35% 20% 35% 10%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "imagen2 imagen2"
-  "titulos2 titulos2"
-  "descripcion2 descripcion2"
-  "modal2 btn2"
-  ;
-  background-color: #fafafa;
-  width: 100%;
-  height: 100%;
-}
-.project3{
-  grid-area: project3;
-  display: grid;
-  grid-template-rows: 35% 20% 35% 10%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "imagen3 imagen3"
-  "titulos3 titulos3"
-  "descripcion3 descripcion3"
-  "modal3 btn3"
-  ;
-  background-color: #fafafa;
-  width: 100%;
-  height: 100%;
-}
+// .projects{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: 1fr 1fr;
+//     gap: 20px;
+//     grid-template-areas: "project1 project2 project3"
+//     "espacio2 espacio2 espacio2";
+//     place-items: center;
+//     padding: 10px;
+// }
+// .project1{
+//     grid-area: project1;
+//     display: grid;
+//     grid-template-rows: 35% 20% 35% 10%;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-areas:
+//     "imagen imagen"
+//     "titulos titulos"
+//     "descripcion descripcion"
+//     "modal btn"
+//     ;
+//     background-color: #fafafa;
+//     width: 100%;
+//     height: 100%;
+// }
+// .project2{
+//   grid-area: project2;
+//   display: grid;
+//   grid-template-rows: 35% 20% 35% 10%;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-areas:
+//   "imagen2 imagen2"
+//   "titulos2 titulos2"
+//   "descripcion2 descripcion2"
+//   "modal2 btn2"
+//   ;
+//   background-color: #fafafa;
+//   width: 100%;
+//   height: 100%;
+// }
+// .project3{
+//   grid-area: project3;
+//   display: grid;
+//   grid-template-rows: 35% 20% 35% 10%;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-areas:
+//   "imagen3 imagen3"
+//   "titulos3 titulos3"
+//   "descripcion3 descripcion3"
+//   "modal3 btn3"
+//   ;
+//   background-color: #fafafa;
+//   width: 100%;
+//   height: 100%;
+// }
 .imagen{
     width: 100%;
     height: 100%;
@@ -68,30 +69,30 @@ main{
   margin: 0;
   padding: 0;
 }
-.imagen2{
-  width: 100%;
-  height: 100%;
-  grid-area: imagen2;
-}
-.imagen2 img{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.imagen3{
-  width: 100%;
-  height: 100%;
-  grid-area: imagen3;
-}
-.imagen3 img{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+// .imagen2{
+//   width: 100%;
+//   height: 100%;
+//   grid-area: imagen2;
+// }
+// .imagen2 img{
+//     height: 100%;
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+// }
+// .imagen3{
+//   width: 100%;
+//   height: 100%;
+//   grid-area: imagen3;
+// }
+// .imagen3 img{
+//     height: 100%;
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+// }
 .titulos{
-  grid-area: titulos;
+  // grid-area: titulos;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -111,77 +112,77 @@ main{
     color: #2c2b2b;
     margin: 0;
 }
-.titulos2{
-  grid-area: titulos2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 5px;
-}
-.titulos2 p:nth-child(1){
-    font-family: "Anta", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    margin: 0;
-}
-.titulos2 p:nth-child(2){
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #2c2b2b;
-    margin: 0;
-}
-.titulos3{
-  grid-area: titulos3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 5px;
-}
-.titulos3 p:nth-child(1){
-    font-family: "Anta", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    margin: 0;
-}
-.titulos3 p:nth-child(2){
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #2c2b2b;
-    margin: 0;
-}
+// .titulos2{
+//   grid-area: titulos2;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   padding: 5px;
+// }
+// .titulos2 p:nth-child(1){
+//     font-family: "Anta", sans-serif;
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #000;
+//     margin: 0;
+// }
+// .titulos2 p:nth-child(2){
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 13px;
+//     font-weight: 400;
+//     color: #2c2b2b;
+//     margin: 0;
+// }
+// .titulos3{
+//   grid-area: titulos3;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   padding: 5px;
+// }
+// .titulos3 p:nth-child(1){
+//     font-family: "Anta", sans-serif;
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #000;
+//     margin: 0;
+// }
+// .titulos3 p:nth-child(2){
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 13px;
+//     font-weight: 400;
+//     color: #2c2b2b;
+//     margin: 0;
+// }
 .descripcion{
-  grid-area: descripcion;
+  // grid-area: descripcion;
   padding: 5px;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 300;
   color: #000;
 }
-.descripcion2{
-    grid-area: descripcion2;
-    padding: 5px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #000;
-}
-.descripcion3{
-  grid-area: descripcion3;
-  padding: 5px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  color: #000;
-}
+// .descripcion2{
+//     grid-area: descripcion2;
+//     padding: 5px;
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 13px;
+//     font-weight: 300;
+//     color: #000;
+// }
+// .descripcion3{
+//   grid-area: descripcion3;
+//   padding: 5px;
+//   font-family: "Montserrat", sans-serif;
+//   font-size: 13px;
+//   font-weight: 300;
+//   color: #000;
+// }
 .btn{
   width: 100%;
-  grid-area: btn;
+  // grid-area: btn;
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 }
 .btn-buton{
     cursor: pointer;
@@ -196,52 +197,52 @@ main{
     font-weight: 500;
     text-decoration: none;
 }
-.btn2{
-  width: 100%;
-  grid-area: btn2;
-  display: flex;
-  justify-content: flex-end;
-}
-.btn-buton2{
-  cursor: pointer;
-  width: 100px;
-  border-radius: 5px 0 0 0;
-  background-color: #121212;
-}
-.btn-buton2 a{
-  color: #e6dc13;
-  font-family: "Anta", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-}
-.btn3{
-  width: 100%;
-  grid-area: btn3;
-  display: flex;
-  justify-content: flex-end;
-}
-.btn-buton3{
-  cursor: pointer;
-  width: 100px;
-  border-radius: 5px 0 0 0;
-  background-color: #121212;
-}
-.btn-buton3 a{
-  color: #e6dc13;
-  font-family: "Anta", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-}
-.espacio{
-    grid-area: espacio;
-}
-.espacio2{
-    grid-area: espacio2;
-}
+// .btn2{
+//   width: 100%;
+//   grid-area: btn2;
+//   display: flex;
+//   justify-content: flex-end;
+// }
+// .btn-buton2{
+//   cursor: pointer;
+//   width: 100px;
+//   border-radius: 5px 0 0 0;
+//   background-color: #121212;
+// }
+// .btn-buton2 a{
+//   color: #e6dc13;
+//   font-family: "Anta", sans-serif;
+//   font-size: 15px;
+//   font-weight: 500;
+//   text-decoration: none;
+// }
+// .btn3{
+//   width: 100%;
+//   grid-area: btn3;
+//   display: flex;
+//   justify-content: flex-end;
+// }
+// .btn-buton3{
+//   cursor: pointer;
+//   width: 100px;
+//   border-radius: 5px 0 0 0;
+//   background-color: #121212;
+// }
+// .btn-buton3 a{
+//   color: #e6dc13;
+//   font-family: "Anta", sans-serif;
+//   font-size: 15px;
+//   font-weight: 500;
+//   text-decoration: none;
+// }
+// .espacio{
+//     grid-area: espacio;
+// }
+// .espacio2{
+//     grid-area: espacio2;
+// }
 .icono-modal{
-    grid-area: modal;
+    // grid-area: modal; 
     width: 25px;
     margin-left: 5px;
 }
@@ -249,70 +250,70 @@ main{
     fill: #121212;
     cursor: pointer;
 }
-.icono-modal2{
-  grid-area: modal2;
-  width: 25px;
-  margin-left: 5px;
-}
-.icono-modal2 svg{
-  fill: #121212;
-  cursor: pointer;
-}
-.icono-modal3{
-  grid-area: modal3;
-  width: 25px;
-  margin-left: 5px;
-}
-.icono-modal3 svg{
-  fill: #121212;
-  cursor: pointer;
-}
-@media only screen and (max-width: 945px){
-    .descripcion{
-        display: none;
-    }
-    .descripcion2{
-      display: none;
-    }
-    .descripcion3{
-      display: none;
-    }
-    .project1{
-      grid-template-rows: 45% 40% 15%;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-      "imagen imagen"
-      "titulos titulos"
-      "modal btn"
-      ;
-    }
-    .project2{
-      grid-template-rows: 45% 40% 15%;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-      "imagen2 imagen2"
-      "titulos2 titulos2"
-      "modal2 btn2"
-      ;
-    }
-    .project3{
-      grid-template-rows: 45% 40% 15%;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-      "imagen3 imagen3"
-      "titulos3 titulos3"
-      "modal3 btn3"
-      ;
-    }
-}
-@media only screen and (max-width: 800px){
-  .projects{
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "project1 project2"
-    "project3 espacio2 "
-    "espacio espacio"
-    ;
-    place-content: center;
-  }
-}
+// .icono-modal2{
+//   grid-area: modal2;
+//   width: 25px;
+//   margin-left: 5px;
+// }
+// .icono-modal2 svg{
+//   fill: #121212;
+//   cursor: pointer;
+// }
+// .icono-modal3{
+//   grid-area: modal3;
+//   width: 25px;
+//   margin-left: 5px;
+// }
+// .icono-modal3 svg{
+//   fill: #121212;
+//   cursor: pointer;
+// }
+// @media only screen and (max-width: 945px){
+//     .descripcion{
+//         display: none;
+//     }
+//     .descripcion2{
+//       display: none;
+//     }
+//     .descripcion3{
+//       display: none;
+//     }
+//     .project1{
+//       grid-template-rows: 45% 40% 15%;
+//       grid-template-columns: 1fr 1fr;
+//       grid-template-areas:
+//       "imagen imagen"
+//       "titulos titulos"
+//       "modal btn"
+//       ;
+//     }
+//     .project2{
+//       grid-template-rows: 45% 40% 15%;
+//       grid-template-columns: 1fr 1fr;
+//       grid-template-areas:
+//       "imagen2 imagen2"
+//       "titulos2 titulos2"
+//       "modal2 btn2"
+//       ;
+//     }
+//     .project3{
+//       grid-template-rows: 45% 40% 15%;
+//       grid-template-columns: 1fr 1fr;
+//       grid-template-areas:
+//       "imagen3 imagen3"
+//       "titulos3 titulos3"
+//       "modal3 btn3"
+//       ;
+//     }
+// }
+// @media only screen and (max-width: 800px){
+//   .projects{
+//     grid-template-columns: 1fr 1fr ;
+//     grid-template-rows: 1fr 1fr 1fr;
+//     grid-template-areas: "project1 project2"
+//     "project3 espacio2 "
+//     "espacio espacio"
+//     ;
+//     place-content: center;
+//   }
+// }

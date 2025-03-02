@@ -22,58 +22,15 @@ import { ButtonModule } from 'primeng/button';
     styleUrls: ['./perfil.component.scss', "../../../utilities/resourses.scss"]
 })
 export class PerfilComponent implements OnInit{
-  // @ViewChild('angular', { static: true }) angular!: TemplateRef<any>;
-
-
-  // select:any;
-
-  // data:graficaConocimientos[] = [
-  //   {
-  //     name: "Angular",
-  //     value: 80,
-  //     bulletSettings: { src: "../../../../assets/angular.png" },
-  //     number:1
-  //   },
-  //   {
-  //     name: "Node js",
-  //     value: 40,
-  //     bulletSettings: { src: "../../../../assets/node.png" },
-  //     number:2
-  //   },
-  //   {
-  //     name: "nest js",
-  //     value: 80,
-  //     bulletSettings: { src: "../../../../assets/nest.png" },
-  //     number:3
-  //   },
-  //   {
-  //     name: "React",
-  //     value: 45,
-  //     bulletSettings: { src: "../../../../assets/react.png" },
-  //     number:4
-  //   },
-  //   {
-  //     name: "sql",
-  //     value: 70,
-  //     bulletSettings: { src: "../../../../assets/sql.png" },
-  //     number:5
-  //   },
-  //   {
-  //     name: "laravel",
-  //     value: 85,
-  //     bulletSettings: { src: "../../../../assets/laravel.png" },
-  //     number:6
-  //   }
-  // ];
-
+  
   conocimientos: any=[
-    { ruta: 'angular', nombre: 'Angular'},
-    { ruta: 'Flutter', nombre: 'Flutter'},
-    { ruta: 'React', nombre: 'React'},
-    { ruta: 'Java', nombre: 'Java'},
-    { ruta: 'Nest', nombre: 'Nest js'},
-    { ruta: 'NETCORE', nombre: '.NET CORE'},
-    { ruta: 'MachineLearning', nombre: 'Machine Learning'}
+    { ruta: 'angular', nombre: 'Angular', disable: false},
+    { ruta: 'Flutter', nombre: 'Flutter', disable: true},
+    { ruta: 'React', nombre: 'React', disable: true},
+    { ruta: 'Java', nombre: 'Java', disable: true},
+    { ruta: 'Nest', nombre: 'Nest js', disable: true},
+    { ruta: 'NETCORE', nombre: '.NET CORE', disable: true},
+    { ruta: 'MachineLearning', nombre: 'Machine Learning', disable: true}
   ]
   experiencia: any=[
     { ruta: 'pasteur', nombre: 'Distribuidora pasteur'},
@@ -93,8 +50,12 @@ export class PerfilComponent implements OnInit{
 
   // }
 
-  navigateTo(ruta:string){
-    this.router.navigate([ruta]);
+  navigateTo(item:any){
+
+    if(item.disable == true){
+      return;
+    }
+    this.router.navigate([item.ruta]);
   }
 
 

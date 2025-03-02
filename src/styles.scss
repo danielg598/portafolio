@@ -1,38 +1,4 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-// @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// @include mat.elevation-classes();
-// @include mat.app-background();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-// $portafolio-temp-primary: mat.m2-define-palette(mat.$m2-indigo-palette);
-// $portafolio-temp-accent: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-// $portafolio-temp-warn: mat.m2-define-palette(mat.$m2-red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-// $portafolio-temp-theme: mat.m2-define-light-theme((
-//   color: (
-//     primary: $portafolio-temp-primary,
-//     accent: $portafolio-temp-accent,
-//     warn: $portafolio-temp-warn,
-//   )
-// ));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-// @include mat.all-component-themes($portafolio-temp-theme);
 
 
 @import '@angular/cdk/overlay-prebuilt.css';
@@ -64,19 +30,13 @@ html, body { height: 100%; }
     color: purple;
   }
 }
-
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-// .p-menubar {
-//   display: flex;
-//   align-items: center;
-//   background: var(--p-menubar-background);
-//   border: none !important;
-//   border-radius: 0% !important;
-//   color: var(--p-menubar-color);
-//   padding: 0% !important;
-//   gap: var(--p-menubar-gap);
-// }
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté sobre los demás elementos */
+}
 .p-menubar{
   background: #f1f5f9 !important;
   border-radius: 0% !important;
@@ -87,4 +47,26 @@ html, body { height: 100%; }
 }
 .custom-overlay-backdrop {
   background-color: rgba(0, 0, 0, 0.7); // Ajusta la opacidad y el color según tus preferencias
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #555;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in forwards;
+
+  i {
+    color: #191919;
+    margin-bottom: 10px;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
