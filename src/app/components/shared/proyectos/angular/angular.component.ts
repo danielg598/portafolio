@@ -7,6 +7,7 @@ import { FiltroAppComponent } from '../../../../utilities/Modales/filtro-app/fil
 import { FormAppModalComponent } from '../../../../utilities/Modales/form-app-modal/form-app-modal.component';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../../utilities/interfaces/projects';
+import { ProjectsComponent } from '../../../../utilities/componentesReutilizables/projects/projects.component';
 
 @Component({
     selector: 'app-angular',
@@ -15,7 +16,8 @@ import { Project } from '../../../../utilities/interfaces/projects';
         FiltroAppComponent,
         FormAppModalComponent,
         PortalModule,
-        CommonModule
+        CommonModule,
+        ProjectsComponent
     ],
     templateUrl: './angular.component.html',
     styleUrl: './angular.component.scss'
@@ -32,7 +34,7 @@ export class AngularComponent implements OnInit, AfterViewInit{
     {
       title: 'Buscador de gifs',
       subtitle: 'gifs app',
-      description: 'Es una aplicación en la cual se trabaja mediante comunicación entre componentes, y se consume un API externo...',
+      description: 'Comunicación entre componentes y API externo.',
       image: 'assets/gifsApp.png',
       link: 'https://jovial-profiterole-c79016.netlify.app/',
       iconFunction: () => this.infoAppGiffs()
@@ -40,7 +42,7 @@ export class AngularComponent implements OnInit, AfterViewInit{
     {
       title: 'Filtro pipe',
       subtitle: 'app de filtrado',
-      description: 'Esta es una aplicación simple, que filtra diferentes valores por medio de un pipe y ngmodel...',
+      description: 'Filtrado de valores con Pipe y ngModel.',
       image: 'assets/filtroPipe.png',
       link: 'https://taupe-caramel-e8fa42.netlify.app/',
       iconFunction: () => this.filterPipe()
@@ -48,7 +50,7 @@ export class AngularComponent implements OnInit, AfterViewInit{
     {
       title: 'FormApp',
       subtitle: 'app de formularios reactivos',
-      description: 'Esta es una aplicación con formularios reactivos que incluyen interfaces simples, dinámicas y switches...',
+      description: 'Formularios reactivos con interfaces dinámicas.',
       image: 'assets/formApp.png',
       link: 'https://spontaneous-starburst-50214c.netlify.app',
       iconFunction: () => this.formApp()

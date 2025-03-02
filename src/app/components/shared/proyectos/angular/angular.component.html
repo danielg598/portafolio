@@ -1,124 +1,25 @@
-<!-- @if (!isLoading; else loadingTemplate) { -->
 <main *ngIf="!isLoading; else loadingTemplate">
-  <!-- grid grid-cols-2 sm:grid-cols-3 -->
   <div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
-
-    <!-- <div class="project1 flex flex-col border border-gray-400 rounded-lg p-4">
-      <div class="imagen">
-          <img src="assets/gifsApp.png" alt="">
-      </div>
-      <div class="titulos">
-          <p>Buscador de gifs</p>
-          <p>gifs app</p>
-      </div>
-      <div class="descripcion hidden sm:block">
-          Es una aplicación en la cual se trabaja mediante comunicación entre componentes, y se consume un api externo. En la cual la idea es mostrar una de interfaz de búsqueda que también muestre un historial de lo que se ha buscado.
-      </div>
-      <div class="flex justify-between items-center">
-
-        <div class="btn">
-            <button type="button" class="btn-buton">
-                <a href="https://jovial-profiterole-c79016.netlify.app/" target="_blank">Go</a>
-            </button>
-        </div>
-        <div class="icono-modal">
-            <svg (click)="infoAppGiffs()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="project2 flex flex-col border border-gray-400 rounded-lg p-4">
-      <div class="imagen">
-          <img src="assets/filtroPipe.png" alt="">
-      </div>
-      <div class="titulos">
-          <p>Filtro pipe</p>
-          <p>app de filtrado</p>
-      </div>
-      <div class="descripcion hidden sm:block">
-        Esta es una aplicación simple, que filtra diferentes valores por medio de un pipe y ngmodel, se consume un API externa simple que trae productos en inglés, la idea es verificar que el filtrado funciona.
-      </div>
-      <div class="flex justify-between items-center">
-
-        <div class="btn">
-            <button type="button" class="btn-buton">
-                <a href="https://taupe-caramel-e8fa42.netlify.app/" target="_blank">Go</a>
-            </button>
-        </div>
-        <div class="icono-modal">
-            <svg (click)="filterPipe()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="project3 flex flex-col border border-gray-400 rounded-lg p-4">
-      <div class="imagen">
-          <img src="assets/formApp.png" alt="">
-      </div>
-      <div class="titulos">
-          <p>FormApp</p>
-          <p>app de formularios reactivos</p>
-      </div>
-      <div class="descripcion hidden sm:block">
-        Esta es una aplicación con formularios reactivos que incluyen interfaces simples, dinámicas y switches. Este enfoque mejora la interacción del usuario y la eficiencia en la gestión de datos, demostrando las capacidades avanzadas de Angular para crear soluciones sofisticadas y altamente interactivas.
-      </div>
-      <div class="flex justify-between items-center">
-
-        <div class="btn">
-            <button type="button" class="btn-buton">
-                <a href="https://spontaneous-starburst-50214c.netlify.app" target="_blank">Go</a>
-            </button>
-        </div>
-        <div class="icono-modal">
-            <svg (click)="formApp()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
-        </div>
-      </div>
-    </div> -->
-
-
-    @for (project of projects; track $index) {
-    <div class="project flex flex-col border border-gray-400 rounded-lg p-4">
-      <div class="imagen">
-        <img [src]="project.image" [alt]="project.title">
-      </div>
-      <div class="titulos">
-        <p>{{ project.title }}</p>
-        <p>{{ project.subtitle }}</p>
-      </div>
-      <div class="descripcion hidden sm:block">
-        {{ project.description }}
-      </div>
-      <div class="flex justify-between items-center">
-        <div class="btn">
-          <button type="button" class="btn-buton">
-            <a [href]="project.link" target="_blank">Go</a>
-          </button>
-        </div>
-        <div class="icono-modal">
-          <svg (click)="project.iconFunction()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  }
-
+    @for (project of projects; track $index) {<app-projects [project]="project"></app-projects>}
   </div>
 </main>
 
+<!-- asi se cragan los modales -->
 <ng-template cdk-portal #InfoAppGiff="cdkPortal">
-    <app-angular-info-app-giffs ></app-angular-info-app-giffs>
+  <app-angular-info-app-giffs></app-angular-info-app-giffs>
 </ng-template>
+
 <ng-template cdk-portal #InfoAppFiltrador="cdkPortal">
-  <app-filtro-app ></app-filtro-app>
+  <app-filtro-app></app-filtro-app>
 </ng-template>
+
 <ng-template cdk-portal #InfoAppFormApp="cdkPortal">
-  <app-form-app-modal ></app-form-app-modal>
+  <app-form-app-modal></app-form-app-modal>
 </ng-template>
 
-
+<!-- asi se carga el spiner de cargando -->
 <ng-template #loadingTemplate>
-  <div class="loading-container" >
+  <div class="loading-container">
     <i class="fas fa-spinner fa-spin fa-3x"></i>
     <p>Cargando...</p>
   </div>
