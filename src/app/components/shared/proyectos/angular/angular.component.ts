@@ -6,6 +6,7 @@ import { PortalModule } from '@angular/cdk/portal';
 import { FiltroAppComponent } from '../../../../utilities/Modales/filtro-app/filtro-app.component';
 import { FormAppModalComponent } from '../../../../utilities/Modales/form-app-modal/form-app-modal.component';
 import { CommonModule } from '@angular/common';
+import { Project } from '../../../../utilities/interfaces/projects';
 
 @Component({
     selector: 'app-angular',
@@ -20,11 +21,41 @@ import { CommonModule } from '@angular/common';
     styleUrl: './angular.component.scss'
 })
 export class AngularComponent implements OnInit, AfterViewInit{
-  isLoading = true;
-
+  
   @ViewChild('InfoAppGiff') InfoAppGiff: any;
   @ViewChild('InfoAppFiltrador') InfoAppFiltrador: any;
   @ViewChild('InfoAppFormApp') InfoAppFormApp: any;
+  
+  isLoading = true;
+
+  projects: Project[] = [
+    {
+      title: 'Buscador de gifs',
+      subtitle: 'gifs app',
+      description: 'Es una aplicación en la cual se trabaja mediante comunicación entre componentes, y se consume un API externo...',
+      image: 'assets/gifsApp.png',
+      link: 'https://jovial-profiterole-c79016.netlify.app/',
+      iconFunction: () => this.infoAppGiffs()
+    },
+    {
+      title: 'Filtro pipe',
+      subtitle: 'app de filtrado',
+      description: 'Esta es una aplicación simple, que filtra diferentes valores por medio de un pipe y ngmodel...',
+      image: 'assets/filtroPipe.png',
+      link: 'https://taupe-caramel-e8fa42.netlify.app/',
+      iconFunction: () => this.filterPipe()
+    },
+    {
+      title: 'FormApp',
+      subtitle: 'app de formularios reactivos',
+      description: 'Esta es una aplicación con formularios reactivos que incluyen interfaces simples, dinámicas y switches...',
+      image: 'assets/formApp.png',
+      link: 'https://spontaneous-starburst-50214c.netlify.app',
+      iconFunction: () => this.formApp()
+
+    }
+  ];
+
 
   constructor(private modal:ModalOverlayService){}
   ngAfterViewInit(): void {

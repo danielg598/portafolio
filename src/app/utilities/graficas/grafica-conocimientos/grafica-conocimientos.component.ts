@@ -5,7 +5,7 @@ import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 import { ArrayUtilities } from '../../ArrayUtilities';
-import { Settings, graficaConocimientos } from '../../interfaces/graficaConocimientos';
+// import { any, graficaConocimientos } from '../../interfaces/projects';
 
 
 
@@ -18,11 +18,11 @@ import { Settings, graficaConocimientos } from '../../interfaces/graficaConocimi
 })
 export class GraficaConocimientosComponent implements OnInit, OnDestroy{
 
-  @Input() chStyles!: Settings['styles'];
-  @Input() chSeries!: Settings['series'];
-  // @Input() chTitle!: Settings['title'];
-  @Input() chData!: Settings['data'];
-  @Input() chId!: Settings['id'];
+  @Input() chStyles!: any['styles'];
+  @Input() chSeries!: any['series'];
+  // @Input() chTitle!: any['title'];
+  @Input() chData!: any['data'];
+  @Input() chId!: any['id'];
   // @Input() totalRec!: number;
   @Output() updateValor = new EventEmitter<Event>();
 
@@ -35,7 +35,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
   public yAxis!: am5xy.ValueAxis<am5xy.AxisRenderer>;
   public series!: am5xy.ColumnSeries;
 
-  #defaultSettings: Partial<Settings> = {
+  #defaultSettings: Partial<any> = {
     styles: { height: '100%'},
     // title: "Gráfico de torta",
     data: [],
@@ -55,7 +55,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
-    const { id } = this.settings;
+    const { id } = this.any;
     // Asegúrate de que el código se ejecuta en el navegador
     if (typeof window !== 'undefined') {
       this.zone.runOutsideAngular(() => {
@@ -83,7 +83,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
 
   ngAfterViewInit(): void {
     this.create();
-    this.update([...Object.keys(this.settings), 'data']);
+    this.update([...Object.keys(this.any), 'data']);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -91,7 +91,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
     this.update(Object.keys(changes).map(key => key.slice(2).toLowerCase()));
   }
 
-  get settings(): Settings {
+  get any(): any {
     const { data, id, styles, series } = this.#defaultSettings;
     return {
       series: { ...series, ...this.chSeries },
@@ -107,18 +107,18 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
   * @param list Opciones de configuración
   */
   update(list: string[]) {
-    const { data, id } = this.settings;
-    if (ArrayUtilities.includesSome<Settings>(['data'], list)) {
+    const { data, id } = this.any;
+    if (ArrayUtilities.includesSome<any>(['data'], list)) {
       this.setData(data);
       this.animate();
     }
-    if (ArrayUtilities.includesSome<Settings>(['series'], list)) {
+    if (ArrayUtilities.includesSome<any>(['series'], list)) {
       this.animate();
     }
   }
 
   create(){
-    const { data, id, series } = this.settings;
+    const { data, id, series } = this.any;
 
     if (!this.root) {
       this.root = am5.Root.new(id);
@@ -185,7 +185,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
     }
 
     this.series.columns.template.events.on('click',function(event){
-      const data = (event.target.dataItem?.dataContext as graficaConocimientos).number;
+      const data = (event.target.dataItem?.dataContext as any).number;
       // console.log(data, "nombre de cada grafica");
       valor(data)
     })
@@ -241,7 +241,7 @@ export class GraficaConocimientosComponent implements OnInit, OnDestroy{
 
   }
 
-  setData(data: Settings['data']) {
+  setData(data: any['data']) {
     this.xAxis.data.setAll(data);
     this.series.data.setAll(data);
   }

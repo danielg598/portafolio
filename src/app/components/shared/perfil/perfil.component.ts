@@ -4,7 +4,6 @@ import { PortalModule } from '@angular/cdk/portal';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { GraficaConocimientosComponent } from '../../../utilities/graficas/grafica-conocimientos/grafica-conocimientos.component';
-import { graficaConocimientos } from '../../../utilities/interfaces/graficaConocimientos';
 import { AngularConocimientosComponent } from './utilities/angular-conocimientos/angular-conocimientos.component';
 import { NodeConocimientosComponent } from './utilities/node-conocimientos/node-conocimientos.component';
 import { NestConocimientosComponent } from './utilities/nest-conocimientos/nest-conocimientos.component';
