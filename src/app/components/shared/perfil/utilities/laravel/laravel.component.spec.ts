@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LaravelConocimientosComponent } from './laravel-conocimientos.component';
+import { LaravelConocimientosComponent } from './laravel.component';
 
 describe('LaravelConocimientosComponent', () => {
   let component: LaravelConocimientosComponent;

@@ -1,15 +1,16 @@
 import { Routes } from '@angular/router';
 import { PerfilComponent } from './components/shared/perfil/perfil.component';
-import { AngularComponent } from './components/shared/proyectos/angular/angular.component';
-import { FlutterComponent } from './components/shared/perfil/utilities/flutter/flutter.component';
 import { NetcoreComponent } from './components/shared/perfil/utilities/netcore/netcore.component';
 import { JavaComponent } from './components/shared/perfil/utilities/java/java.component';
-import { ReactConocimientosComponent } from './components/shared/perfil/utilities/react-conocimientos/react-conocimientos.component';
+import { ReactComponent } from './components/shared/perfil/utilities/react/react.component';
 import { MachineLearningComponent } from './components/shared/perfil/utilities/machine-learning/machine-learning.component';
-import { NestConocimientosComponent } from './components/shared/perfil/utilities/nest-conocimientos/nest-conocimientos.component';
+import { NestJsComponent } from './components/shared/perfil/utilities/nestJs/nest-conocimientos.component';
 import { PasteurComponent } from './components/shared/experiencia/pasteur/pasteur.component';
 import { GarantiasComunitariasComponent } from './components/shared/experiencia/garantias-comunitarias/garantias-comunitarias.component';
 import { ConfiarCooperativaComponent } from './components/shared/experiencia/confiar-cooperativa/confiar-cooperativa.component';
+import { CsharpComponent } from './components/shared/perfil/utilities/csharp/csharp.component';
+import { AngularComponent } from './components/shared/perfil/utilities/angular/angular.component';
+import { FlutterComponent } from './components/shared/perfil/utilities/flutter/flutter.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,10 @@ export const routes: Routes = [
     {
         path:'pasteur',
         component: PasteurComponent
+    },
+    {
+        path:'c#',
+        component: CsharpComponent
     },
     {
         path:'garantiasComunitarias',
@@ -46,7 +51,7 @@ export const routes: Routes = [
     },
     {
         path:'React',
-        component: ReactConocimientosComponent
+        component: ReactComponent
     },
     {
         path:'MachineLearning',
@@ -54,7 +59,7 @@ export const routes: Routes = [
     },
     {
         path:'Nest',
-        component: NestConocimientosComponent
+        component: NestJsComponent
     },
     {
         path:'**',

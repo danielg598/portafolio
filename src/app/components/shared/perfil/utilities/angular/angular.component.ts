@@ -1,13 +1,13 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalOverlayService } from '../../../../utilities/services/modal-overlay.service';
-import { AngularInfoAppGiffsComponent } from '../../../../utilities/Modales/angular-info-app-giffs/angular-info-app-giffs.component';
+import { ModalOverlayService } from '../../../../../utilities/services/modal-overlay.service';
+import { AngularInfoAppGiffsComponent } from '../../../../../utilities/Modales/angular-info-app-giffs/angular-info-app-giffs.component';
 import { PortalModule } from '@angular/cdk/portal';
-import { FiltroAppComponent } from '../../../../utilities/Modales/filtro-app/filtro-app.component';
-import { FormAppModalComponent } from '../../../../utilities/Modales/form-app-modal/form-app-modal.component';
+import { FiltroAppComponent } from '../../../../../utilities/Modales/filtro-app/filtro-app.component';
+import { FormAppModalComponent } from '../../../../../utilities/Modales/form-app-modal/form-app-modal.component';
 import { CommonModule } from '@angular/common';
-import { Project } from '../../../../utilities/interfaces/projects';
-import { ProjectsComponent } from '../../../../utilities/componentesReutilizables/projects/projects.component';
+import { Project } from '../../../../../utilities/interfaces/projects';
+import { ProjectsComponent } from '../../../../../utilities/componentesReutilizables/projects/projects.component';
 
 @Component({
     selector: 'app-angular',

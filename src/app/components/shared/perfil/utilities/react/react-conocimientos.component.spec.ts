@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactConocimientosComponent } from './react-conocimientos.component';
+import { ReactConocimientosComponent } from './react.component';
 
 describe('ReactConocimientosComponent', () => {
   let component: ReactConocimientosComponent;
