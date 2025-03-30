@@ -17,7 +17,7 @@ export class PerfilComponent implements OnInit{
   
   conocimientos: any=[
     { ruta: 'angular', nombre: 'Angular', disable: false},
-    { ruta: 'c#', nombre: 'c#', disable: true},
+    { ruta: 'cSharp', nombre: 'cSharp', disable: true},
     { ruta: 'Flutter', nombre: 'Flutter', disable: true},
     { ruta: 'React', nombre: 'React', disable: true},
     { ruta: 'Java', nombre: 'Java', disable: true},

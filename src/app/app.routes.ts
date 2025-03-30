@@ -22,7 +22,7 @@ export const routes: Routes = [
         component: PasteurComponent
     },
     {
-        path:'c#',
+        path:'cSharp',
         component: CsharpComponent
     },
     {
