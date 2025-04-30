@@ -1,0 +1,47 @@
+.titulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+}
+.titulos p:nth-child(1){
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+.titulos p:nth-child(2){
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #2c2b2b;
+    margin: 0;
+}
+.titulo_conocimientos{
+    font-family: "Anta", sans-serif;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #000;
+}
+.titulo_lista{
+    color: #000;
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+.texto_lista{
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+.git{
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6a6a6a;
+    margin: 0;
+    text-decoration: none;
+}

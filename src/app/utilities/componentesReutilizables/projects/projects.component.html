@@ -10,11 +10,13 @@
         {{ project.description }}
     </div>
     <div class="flex justify-between items-center">
+        @if (porjectProduction) {
         <div class="btn">
             <button type="button" class="btn-buton">
                 <a [href]="project.link" target="_blank">Go</a>
             </button>
         </div>
+        }
         <div class="icono-modal">
             <svg (click)="project.iconFunction()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path

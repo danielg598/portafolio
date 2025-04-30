@@ -3,6 +3,6 @@ export interface Project {
   subtitle: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
   iconFunction: () => void;
 }

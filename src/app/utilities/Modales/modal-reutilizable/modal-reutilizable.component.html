@@ -1,0 +1,28 @@
+<div class="w-[500px] bg-white overflow-y-auto max-h-[300px]">
+    <div class="grid grid-cols-3">
+        <figure class="col-span-3">
+            <!-- aca en la imagen reemplazar el nombre de la imagen por el @input -->
+            <img class="w-auto" [src]="'../../../../assets/'+data.imagen" alt="">
+        </figure>
+        <div class="titulos col-span-3">
+            <p class="">{{data.titulo}}</p>
+            <p class="">{{data.subtitulo}}</p>
+        </div>
+        <div class="col-span-3 justify-items-center mt-[20px]">
+            <p class="titulo_conocimientos">{{data.tituloConocimientos}}</p>
+        </div>
+        <div class="col-span-3 flex flex-col mt-[10px]">
+            @for (grupo of agrupadoConocimientos; track $index) {
+                <p class="text-start titulo_lista">{{ grupo.titulo }}</p>
+                <ul class="p-4 list-disc flex flex-col justify-start">
+                  @for (desc of grupo.descripciones; track $index) {
+                    <li class="texto_lista">{{ desc }}</li>
+                  }
+                </ul>
+              }
+        </div>
+        <div class="flex col-span-3 justify-end pt-5">
+            <a class="p-3 git" href="{{data.github}}" target="_blank" rel="noopener noreferrer">Proyecto GitHub</a>
+        </div>
+    </div>
+</div>

@@ -18,12 +18,12 @@ export class PerfilComponent implements OnInit{
   conocimientos: any=[
     { ruta: 'angular', nombre: 'Angular', disable: false},
     { ruta: 'cSharp', nombre: 'cSharp', disable: true},
-    { ruta: 'Flutter', nombre: 'Flutter', disable: true},
-    { ruta: 'React', nombre: 'React', disable: true},
+    // { ruta: 'Flutter', nombre: 'Flutter', disable: true},
+    { ruta: 'React', nombre: 'React', disable: false},
     { ruta: 'Java', nombre: 'Java', disable: true},
-    { ruta: 'Nest', nombre: 'Nest js', disable: true},
-    { ruta: 'NETCORE', nombre: '.NET CORE', disable: true},
-    { ruta: 'MachineLearning', nombre: 'Machine Learning', disable: true}
+    // { ruta: 'Nest', nombre: 'Nest js', disable: true},
+    { ruta: 'NETCORE', nombre: '.NET CORE', disable: true}
+    // { ruta: 'MachineLearning', nombre: 'Machine Learning', disable: true}
   ]
   experiencia: any=[
     { ruta: 'pasteur', nombre: 'Distribuidora pasteur'},

@@ -6,15 +6,15 @@
 
 <!-- asi se cragan los modales -->
 <ng-template cdk-portal #InfoAppGiff="cdkPortal">
-  <app-angular-info-app-giffs></app-angular-info-app-giffs>
+  <app-modal-reutilizable [data]="GifApp"></app-modal-reutilizable>
 </ng-template>
 
 <ng-template cdk-portal #InfoAppFiltrador="cdkPortal">
-  <app-filtro-app></app-filtro-app>
+  <app-modal-reutilizable [data]="FiltroApp"></app-modal-reutilizable>
 </ng-template>
 
 <ng-template cdk-portal #InfoAppFormApp="cdkPortal">
-  <app-form-app-modal></app-form-app-modal>
+  <app-modal-reutilizable [data]="FormularioReactivoApp"></app-modal-reutilizable>
 </ng-template>
 
 <!-- asi se carga el spiner de cargando -->

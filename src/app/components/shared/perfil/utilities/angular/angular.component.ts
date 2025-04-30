@@ -1,33 +1,92 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalOverlayService } from '../../../../../utilities/services/modal-overlay.service';
-import { AngularInfoAppGiffsComponent } from '../../../../../utilities/Modales/angular-info-app-giffs/angular-info-app-giffs.component';
 import { PortalModule } from '@angular/cdk/portal';
-import { FiltroAppComponent } from '../../../../../utilities/Modales/filtro-app/filtro-app.component';
-import { FormAppModalComponent } from '../../../../../utilities/Modales/form-app-modal/form-app-modal.component';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../../../utilities/interfaces/projects';
 import { ProjectsComponent } from '../../../../../utilities/componentesReutilizables/projects/projects.component';
+import { ModalReutilizableComponent } from '../../../../../utilities/Modales/modal-reutilizable/modal-reutilizable.component';
+import { InfoCompleta } from '../../../../../utilities/interfaces/modalReuzable';
 
 @Component({
-    selector: 'app-angular',
-    imports: [
-        AngularInfoAppGiffsComponent,
-        FiltroAppComponent,
-        FormAppModalComponent,
-        PortalModule,
-        CommonModule,
-        ProjectsComponent
-    ],
-    templateUrl: './angular.component.html',
-    styleUrl: './angular.component.scss'
+  selector: 'app-angular',
+  imports: [
+    PortalModule,
+    CommonModule,
+    ProjectsComponent,
+    ModalReutilizableComponent
+  ],
+  templateUrl: './angular.component.html',
+  styleUrl: './angular.component.scss'
 })
-export class AngularComponent implements OnInit, AfterViewInit{
-  
+export class AngularComponent implements OnInit {
+
   @ViewChild('InfoAppGiff') InfoAppGiff: any;
   @ViewChild('InfoAppFiltrador') InfoAppFiltrador: any;
   @ViewChild('InfoAppFormApp') InfoAppFormApp: any;
-  
+
+  GifApp: InfoCompleta = {
+    imagen: 'gifsApp.png',
+    titulo: 'Buscador de gifs',
+    subtitulo: 'gifs app',
+    tituloConocimientos: 'Conocimientos Adquiridos',
+    github: 'https://github.com/danielg598/GifsApp.git',
+    conocimientos: [
+      { tituloConocimiento: 'Comunicación entre componentes', posicion: 1 },
+      { tituloConocimiento: 'Peticiones http', posicion: 2 }
+    ],
+    listaConocimientos: [
+      { descripcion: 'Se utiliza el decorador input para pasar datos desde un componente padre a un componente hijo.', posicion: 1 },
+      { descripcion: 'Se utiliza el decorador output se utiliza para emitir eventos desde un componente hijo hacia un componente padre.', posicion: 1 },
+      { descripcion: 'Se crea un servicio para realizar peticiones http a un Api externa o Apis propias.', posicion: 2 },
+      { descripcion: 'Se consume el servicio para suscribirnos al método que trae la información del Api y por parámetro se le manda la palabra que se desea buscar en el api de GHYPI.', posicion: 2 }
+    ]
+  };
+
+  FiltroApp: InfoCompleta = {
+    imagen: 'filtroPipe.png',
+    titulo: 'Filtro pipe',
+    subtitulo: 'app de filtrado',
+    tituloConocimientos: 'Conocimientos Adquiridos',
+    github: 'https://github.com/danielg598/buscadorPipe.git',
+    conocimientos: [
+      { tituloConocimiento: 'Transformación de datos', posicion: 1 },
+      { tituloConocimiento: 'Manejo de arrays y objetos en JavaScript/TypeScript', posicion: 2 },
+      { tituloConocimiento: 'Principios de programación funcional', posicion: 3 },
+      { tituloConocimiento: 'Detección de cambios', posicion: 4 }
+    ],
+    listaConocimientos: [
+      { descripcion: 'Se aprende cómo los pipes pueden transformar datos para su visualización sin alterar la estructura original de los datos. Esto es fundamental para operaciones como formatear fechas, números, y realizar filtrados dinámicos que solo afectan lo que el usuario ve en la pantalla.', posicion: 1 },
+      { descripcion: 'Entender la diferencia entre pipes puros e impuros y cómo esto afecta el rendimiento de una aplicación.', posicion: 1 },
+      { descripcion: 'Profundizar en el manejo de estructuras de datos para implementar la lógica de filtrado, utilizando métodos como filter(), map(), reduce(), entre otros.', posicion: 2 },
+      { descripcion: 'Al implementar un pipe de filtrado, se refuerza mi comprensión de la programación funcional, ya que los pipes son un excelente ejemplo de este paradigma, donde se favorece la inmutabilidad y las funciones puras.', posicion: 3 },
+      { descripcion: 'Aprendi cómo Angular gestiona la detección de cambios y cómo los pipes pueden influir en este proceso. Esto es clave para optimizar el rendimiento de tu aplicación, especialmente en listas grandes que requieren filtrado.', posicion: 4 }
+    ]
+  };
+
+  FormularioReactivoApp: InfoCompleta = {
+    imagen: 'formApp.png',
+    titulo: 'Formularios reactivos',
+    subtitulo: 'app de formularios reactivos',
+    tituloConocimientos: 'Conocimientos Adquiridos',
+    github: 'https://github.com/danielg598/formApp.git',
+    conocimientos: [
+      { tituloConocimiento: 'Creación de Formularios Simples', posicion: 1 },
+      { tituloConocimiento: 'Formularios Dinámicos', posicion: 2 },
+      { tituloConocimiento: 'Formularios con Arrays', posicion: 3 },
+      { tituloConocimiento: 'Formularios con Switches', posicion: 4 },
+      { tituloConocimiento: 'Validaciones Centralizadas', posicion: 5 },
+      { tituloConocimiento: 'Manejo de Estado y Respuestas', posicion: 6 }
+    ],
+    listaConocimientos: [
+      { descripcion: 'Aprendizaje sobre la utilización del ReactiveFormsModule y la creación de formularios utilizando FormControl y FormGroup para un control más detallado y programático de los datos del formulario.', posicion: 1 },
+      { descripcion: 'Capacidad para construir formularios que se ajustan en tiempo real a las interacciones del usuario, usando FormArray para añadir o eliminar campos de forma dinámica según las necesidades del usuario.', posicion: 2 },
+      { descripcion: 'Manejo de listas de datos dentro de los formularios, como tags o entradas múltiples, mediante FormArray, lo cual permite una estructura de datos más compleja y flexible.', posicion: 3 },
+      { descripcion: 'Implementación de switches como controles dentro de los formularios, facilitando interfaces como activar/desactivar opciones, que son comunes en configuraciones y preferencias.', posicion: 4 },
+      { descripcion: 'Uso de un servicio de validaciones donde se centralizan todas las reglas de validación de los formularios, lo que promueve la reutilización de código y facilita el mantenimiento del sistema de validación de la aplicación.', posicion: 5 },
+      { descripcion: 'Aprendizaje en la gestión del estado de los formularios y la manipulación de las respuestas del servidor, para realizar acciones basadas en la validación y el procesamiento de los datos del formulario.', posicion: 6 }
+    ]
+  };
+
   isLoading = true;
 
   projects: Project[] = [
@@ -59,10 +118,8 @@ export class AngularComponent implements OnInit, AfterViewInit{
   ];
 
 
-  constructor(private modal:ModalOverlayService){}
-  ngAfterViewInit(): void {
-    // this.isLoading = true;
-  }
+  constructor(private modal: ModalOverlayService) { }
+
 
   ngOnInit() {
     // Simular un tiempo de carga (por ejemplo, 2 segundos)
@@ -72,14 +129,14 @@ export class AngularComponent implements OnInit, AfterViewInit{
   }
 
 
-  infoAppGiffs(){
+  private infoAppGiffs() {
     this.modal.openOverlay(this.InfoAppGiff);
 
   }
-  filterPipe(){
+  private filterPipe() {
     this.modal.openOverlay(this.InfoAppFiltrador);
   }
-  formApp(){
+  private formApp() {
     this.modal.openOverlay(this.InfoAppFormApp);
   }
 }
