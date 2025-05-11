@@ -11,6 +11,7 @@ import { ConfiarCooperativaComponent } from './components/shared/experiencia/con
 import { CsharpComponent } from './components/shared/perfil/utilities/csharp/csharp.component';
 import { AngularComponent } from './components/shared/perfil/utilities/angular/angular.component';
 import { FlutterComponent } from './components/shared/perfil/utilities/flutter/flutter.component';
+import { ContactoComponent } from './components/shared/contacto/contacto.component';
 
 export const routes: Routes = [
     {
@@ -60,6 +61,10 @@ export const routes: Routes = [
     {
         path:'Nest',
         component: NestJsComponent
+    },
+    {
+        path:'Contact',
+        component: ContactoComponent
     },
     {
         path:'**',

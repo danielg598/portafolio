@@ -1,24 +1,36 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, signal, ViewChild } from '@angular/core';
 import { ModalOverlayService } from '../../../../../utilities/services/modal-overlay.service';
 import { PortalModule } from '@angular/cdk/portal';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { Project } from '../../../../../utilities/interfaces/projects';
 import { ProjectsComponent } from '../../../../../utilities/componentesReutilizables/projects/projects.component';
 import { ModalReutilizableComponent } from '../../../../../utilities/Modales/modal-reutilizable/modal-reutilizable.component';
 import { InfoCompleta } from '../../../../../utilities/interfaces/modalReuzable';
+// aca se importa esto en el componente que se requiere usar el swiper
+// import { register, SwiperContainer } from 'swiper/element/bundle';
+// import { SwiperOptions } from 'swiper/types';
+import { BehaviorSubject } from 'rxjs';
+import { SwiperComponent } from '../../../../../utilities/componentesReutilizables/swiper/swiper.component';
+// register();
 
 @Component({
   selector: 'app-angular',
+  standalone:true,
   imports: [
     PortalModule,
     CommonModule,
     ProjectsComponent,
-    ModalReutilizableComponent
+    ModalReutilizableComponent,
+    SwiperComponent
   ],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './angular.component.html',
-  styleUrl: './angular.component.scss'
+  styleUrl: './angular.component.scss',
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AngularComponent implements OnInit {
+
+  // swiperElement = signal<SwiperContainer | null>(null);
 
   @ViewChild('InfoAppGiff') InfoAppGiff: any;
   @ViewChild('InfoAppFiltrador') InfoAppFiltrador: any;
@@ -87,7 +99,9 @@ export class AngularComponent implements OnInit {
     ]
   };
 
-  isLoading = true;
+  // isLoading = true;
+  isLoading$ = new BehaviorSubject<boolean>(true);
+
 
   projects: Project[] = [
     {
@@ -124,8 +138,11 @@ export class AngularComponent implements OnInit {
   ngOnInit() {
     // Simular un tiempo de carga (por ejemplo, 2 segundos)
     setTimeout(() => {
-      this.isLoading = false;
+      this.isLoading$.next(false);
     }, 2000);
+
+    
+
   }
 
 

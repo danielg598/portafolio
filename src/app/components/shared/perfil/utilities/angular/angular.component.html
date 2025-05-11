@@ -1,8 +1,35 @@
-<main *ngIf="!isLoading; else loadingTemplate">
+<ng-container *ngIf="(isLoading$ | async) === false; else loadingTemplate">
+  @if (false) {
+  <div class="grid grid-cols-3">
+    <app-swiper></app-swiper>
+
+    <!-- <p>2</p> -->
+    <!-- <p>3</p> -->
+  </div>
+  }
   <div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
     @for (project of projects; track $index) {<app-projects [project]="project"></app-projects>}
   </div>
-</main>
+</ng-container>
+<!-- <main >
+  <div class="grid grid-cols-3">
+    <div class="flex items-center max-w-[300px]">
+      <button class="px-2">←</button>
+      
+      <swiper-container id="swiperRef"  init="false" class="mySwiper w-full">
+        <swiper-slide>Slide 1</swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+      </swiper-container>
+      
+      <button class="px-2">→</button>
+    </div>
+  
+  </div>
+  <div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
+    @for (project of projects; track $index) {<app-projects [project]="project"></app-projects>}
+  </div>
+</main> -->
 
 <!-- asi se cragan los modales -->
 <ng-template cdk-portal #InfoAppGiff="cdkPortal">

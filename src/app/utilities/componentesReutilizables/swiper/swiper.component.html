@@ -1,0 +1,31 @@
+<div class="flex items-center justify-between">
+    <button id="reverse" class="px-2 relative z-10">←</button>
+    
+    <swiper-container id="swiperRef"  init="false" class="mySwiper w-full relative z-0">
+      <swiper-slide>
+        <div class="relative ">
+            <!-- Imagen de fondo -->
+            <img src="assets/filtroPipe.png" alt="imagen" class="w-full h-full object-cover rounded-lg" />
+          
+            <!-- Textos a la derecha, encima de la imagen -->
+            <div class="absolute top-4 right-4 text-white flex flex-col items-end space-y-2">
+              <p class="text-sm">Texto 1</p>
+              <p class="text-sm">Texto 2</p>
+              <p class="text-sm">Texto 3</p>
+            </div>
+          
+            <!-- Botón abajo a la izquierda, dentro de la imagen -->
+            <button class="absolute bottom-4 left-4 bg-white text-black px-4 py-2 rounded shadow">
+              Botón
+            </button>
+          </div>
+      </swiper-slide>
+      <swiper-slide><img src="assets/filtroPipe.png" alt=""></swiper-slide>
+      <swiper-slide><img src="assets/formApp.png" alt=""></swiper-slide>
+      <swiper-slide><img src="assets/gifsApp.png" alt=""></swiper-slide>
+      <swiper-slide><img src="assets/filtroPipe.png" alt=""></swiper-slide>
+      <swiper-slide><img src="assets/formApp.png" alt=""></swiper-slide>
+    </swiper-container>
+    
+    <button id="next" class="px-2 relative z-10">→</button>
+</div>
