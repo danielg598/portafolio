@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactoService } from '../../../utilities/services/contacto.service';
 import { finalize } from 'rxjs';
@@ -36,15 +36,20 @@ export class ContactoComponent implements OnInit, OnDestroy{
 
   constructor(
     private fb: FormBuilder,
-    private contactoService: ContactoService
+    private contactoService: ContactoService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
   ngOnInit(): void {
-    this.iniciarMensajesCarga();
+    if (isPlatformBrowser(this.platformId)) {
+      this.iniciarMensajesCarga();
+    }
   }
 
   ngOnDestroy(): void {
-    this.detenerMensajesCarga();
+    if (isPlatformBrowser(this.platformId)) {
+      this.detenerMensajesCarga();
+    }
   }
 
   iniciarMensajesCarga() {
