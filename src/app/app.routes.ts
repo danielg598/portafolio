@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PerfilComponent } from './components/shared/perfil/perfil.component';
 import { NetcoreComponent } from './components/shared/perfil/utilities/netcore/netcore.component';
 import { JavaComponent } from './components/shared/perfil/utilities/java/java.component';
 import { ReactComponent } from './components/shared/perfil/utilities/react/react.component';
@@ -16,7 +15,9 @@ import { ContactoComponent } from './components/shared/contacto/contacto.compone
 export const routes: Routes = [
     {
         path:'sobreMi',
-        component: PerfilComponent
+        // component: PerfilComponent
+        loadChildren: () =>
+            import('../app/components/shared/perfil/perfil.routes').then(m => m.perfilRoutes)
     },
     {
         path:'pasteur',

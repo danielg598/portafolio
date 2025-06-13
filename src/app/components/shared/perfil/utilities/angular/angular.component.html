@@ -1,16 +1,68 @@
 <ng-container *ngIf="(isLoading$ | async) === false; else loadingTemplate">
-  @if (false) {
-  <div class="grid grid-cols-3">
-    <app-swiper></app-swiper>
-
-    <!-- <p>2</p> -->
-    <!-- <p>3</p> -->
+  <div class="p-5 titulo text-left border-t-[0.5px] m-2 border-gray-300 ">
+    <p >Habilidades en angular</p>
   </div>
-  }
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <div class="p-5">
+
+      <app-swiper></app-swiper>
+    </div>
+    <div class="p-5">
+      <app-texto-a-maquina [fullText]="texto" [typingSpeed]="30"
+        [customStyle]="{ 'font-family': '\'Courier New\', monospace', 'font-size': '20px', 'color': '#000' }"
+        [customClass]="'text-left w-full'">
+      </app-texto-a-maquina>
+    </div>
+  </div>
+  <div class="p-5 titulo text-right border-t-[0.5px] m-2 border-gray-300 ">
+    <p >Proyectos</p>
+  </div>
+  
   <div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
-    @for (project of projects; track $index) {<app-projects [project]="project"></app-projects>}
+    @for (project of projects; track $index) {
+    <app-projects [project]="project"></app-projects>
+    }
   </div>
 </ng-container>
+
+<!-- @if ((isLoading$ | async) === false) {
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+  <div class="p-5">
+
+    <app-swiper></app-swiper>
+  </div>
+  <div class="p-5">
+    <app-texto-a-maquina [fullText]="texto" [typingSpeed]="30"
+      [customStyle]="{ 'font-family': '\'Courier New\', monospace', 'font-size': '20px', 'color': '#000' }"
+      [customClass]="'text-left w-full'">
+    </app-texto-a-maquina>
+  </div>
+</div>
+<h2 style="
+  /* font-family: 'Bangers', cursive; */
+  font-size: 64px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  /* text-shadow: 2px 2px 0 #000, 4px 4px 0 #f00; */
+">
+  ¡PROYECTOS!
+</h2>
+<div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
+  @for (project of projects; track $index) {
+  <app-projects [project]="project"></app-projects>
+  }
+</div>
+} @else {
+<ng-template #loadingTemplate>
+  <div class="loading-container">
+    <i class="fas fa-spinner fa-spin fa-3x"></i>
+    <p>Cargando...</p>
+  </div>
+</ng-template>
+<ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
+} -->
 <!-- <main >
   <div class="grid grid-cols-3">
     <div class="flex items-center max-w-[300px]">

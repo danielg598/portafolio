@@ -1,8 +1,11 @@
-<main *ngIf="!isLoading; else loadingTemplate">
+<ng-container *ngIf="!isLoading; else loadingTemplate">
+  <div class="p-5 titulo text-left border-t-[0.5px] m-2 border-gray-300 ">
+    <p >Proyectos</p>
+  </div>
   <div class="projects grid grid-cols-2 sm:grid-cols-3 gap-3 p-5">
     @for (project of projects; track $index) {<app-projects [porjectProduction]="projectProduction" [project]="project"></app-projects>}
   </div>
-</main>
+</ng-container>
 
 <!-- asi se cragan los modales -->
 <ng-template cdk-portal #calendario="cdkPortal">

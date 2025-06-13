@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginaInicialComponent } from './pagina-inicial.component';
+import { TextoAMaquinaComponent } from './texto-a-maquina.component';
 
-describe('PaginaInicialComponent', () => {
-  let component: PaginaInicialComponent;
-  let fixture: ComponentFixture<PaginaInicialComponent>;
+describe('TextoAMaquinaComponent', () => {
+  let component: TextoAMaquinaComponent;
+  let fixture: ComponentFixture<TextoAMaquinaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaginaInicialComponent]
+      imports: [TextoAMaquinaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PaginaInicialComponent);
+    fixture = TestBed.createComponent(TextoAMaquinaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

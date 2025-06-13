@@ -1,7 +1,7 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnDestroy, OnInit, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { ModalOverlayService } from '../../../../../utilities/services/modal-overlay.service';
 import { PortalModule } from '@angular/cdk/portal';
-import { CommonModule, DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Project } from '../../../../../utilities/interfaces/projects';
 import { ProjectsComponent } from '../../../../../utilities/componentesReutilizables/projects/projects.component';
 import { ModalReutilizableComponent } from '../../../../../utilities/Modales/modal-reutilizable/modal-reutilizable.component';
@@ -9,8 +9,9 @@ import { InfoCompleta } from '../../../../../utilities/interfaces/modalReuzable'
 // aca se importa esto en el componente que se requiere usar el swiper
 // import { register, SwiperContainer } from 'swiper/element/bundle';
 // import { SwiperOptions } from 'swiper/types';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, interval, startWith, Subscription, switchMap } from 'rxjs';
 import { SwiperComponent } from '../../../../../utilities/componentesReutilizables/swiper/swiper.component';
+import { TextoAMaquinaComponent } from '../../../../../utilities/componentesReutilizables/utilidades/texto-a-maquina/texto-a-maquina.component';
 // register();
 
 @Component({
@@ -21,7 +22,8 @@ import { SwiperComponent } from '../../../../../utilities/componentesReutilizabl
     CommonModule,
     ProjectsComponent,
     ModalReutilizableComponent,
-    SwiperComponent
+    SwiperComponent,
+    TextoAMaquinaComponent
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './angular.component.html',
@@ -130,6 +132,11 @@ export class AngularComponent implements OnInit {
 
     }
   ];
+
+  texto = 'Desliza o haz clic en los botones del slider para explorar los distintos conocimientos y herramientas que domino trabajando con Angular. Desde arquitectura de componentes y servicios, hasta integración con APIs REST, manejo avanzado de RxJS, gestión de estado con NgRx, y estrategias efectivas de comunicación entre componentes.';
+  texto2 = 'Desde arquitectura de componentes y servicios, hasta integración con APIs REST, manejo avanzado de RxJS, gestión de estado con NgRx, y estrategias efectivas de comunicación entre componentes.';
+  texto3 = 'Cada proyecto refleja mi compromiso con la calidad del código, la reutilización de componentes y la creación de aplicaciones escalables y mantenibles.';
+  texto4 = '¡Explora mis proyectos y descubre cómo Angular puede transformar tus ideas en aplicaciones web dinámicas y eficientes!';
 
 
   constructor(private modal: ModalOverlayService) { }

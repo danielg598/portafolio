@@ -2,13 +2,14 @@ import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, signal } from '@angular/core';
 import { register, SwiperContainer } from 'swiper/element/bundle';
 import { CardsEffectOptions, CoverflowEffectOptions, CubeEffectOptions, SwiperOptions } from 'swiper/types';
+import { ButtonModule } from 'primeng/button';
 register();
 
 @Component({
   selector: 'app-swiper',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [],
+  imports: [ButtonModule],
   templateUrl: './swiper.component.html',
   styleUrl: './swiper.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -27,34 +28,11 @@ export class SwiperComponent implements OnInit {
     if (swiperConstructor) {
       const swiperOptions: SwiperOptions = {
         navigation: false,
-        // spaceBetween: 250,
         loop: true,
         effect:"slide",
-        // cubeEffect:{
-        //   slideShadows:false,
-        //   shadow:true,
-        //   shadowScale:1,
-        //   shadowOffset:1.5
-        // },
-        // cardsEffect:{
-        //   perSlideRotate:3,
-        //   // perSlideOffset:5
-        // },
-        // coverflowEffect: {
-        //   rotate: 10,
-        //   slideShadows: false,
-        //   stretch:200,
-        //   depth:1800,
-        //   modifier:1
-        // },
         grabCursor:true,
-        // breakpoints:{
-        //   335:{
-        //     slidesPerView:2
-        //   }
-        // }
         autoplay:{
-          delay: 3000
+          delay: 5000
         },
         centeredSlides:true,
         slidesPerView:"auto",
@@ -66,7 +44,10 @@ export class SwiperComponent implements OnInit {
 
     }
     this.swiperElement.set(swiperConstructor as SwiperContainer);
-    this.swiperElement()?.initialize();
+    if (typeof (swiperConstructor as any).initialize === 'function') {
+      (swiperConstructor as any).initialize();
+    }
+    // this.swiperElement()?.initialize();
   }
 
 }

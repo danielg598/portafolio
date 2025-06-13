@@ -66,6 +66,14 @@ html, body { height: 100%; }
     opacity: 1 !important;
   }
 }
+
+.titulo p {
+    font-family: "Anta", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #161613;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
