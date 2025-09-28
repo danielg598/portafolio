@@ -12,6 +12,7 @@ import { InfoCompleta } from '../../../../../utilities/interfaces/modalReuzable'
 import { BehaviorSubject, interval, startWith, Subscription, switchMap } from 'rxjs';
 import { SwiperComponent } from '../../../../../utilities/componentesReutilizables/swiper/swiper.component';
 import { TextoAMaquinaComponent } from '../../../../../utilities/componentesReutilizables/utilidades/texto-a-maquina/texto-a-maquina.component';
+import { Conocimiento } from '../../../../../utilities/interfaces/conocimientos';
 // register();
 
 @Component({
@@ -133,10 +134,13 @@ export class AngularComponent implements OnInit {
     }
   ];
 
+  skills: Conocimiento[]=[
+    {ruta: 'rxjs', nombre: 'rxjs', disable: false, imagen: 'assets/rxjs.jpg', nombreImagen: 'rxjs', habilitarTexto: false},
+    {ruta: 'ngrx', nombre: 'ngrx', disable: false, imagen: 'assets/ngrx.jpg', nombreImagen: 'ngrx', habilitarTexto: false},
+    {ruta: 'formularios', nombre: 'formularios reactivos', disable: false, imagen: 'assets/formularios.jpg', nombreImagen: 'formularios reactivos', habilitarTexto: true, texto: 'Formularios reactivos con Angular'},
+  ]
+
   texto = 'Desliza o haz clic en los botones del slider para explorar los distintos conocimientos y herramientas que domino trabajando con Angular. Desde arquitectura de componentes y servicios, hasta integración con APIs REST, manejo avanzado de RxJS, gestión de estado con NgRx, y estrategias efectivas de comunicación entre componentes.';
-  texto2 = 'Desde arquitectura de componentes y servicios, hasta integración con APIs REST, manejo avanzado de RxJS, gestión de estado con NgRx, y estrategias efectivas de comunicación entre componentes.';
-  texto3 = 'Cada proyecto refleja mi compromiso con la calidad del código, la reutilización de componentes y la creación de aplicaciones escalables y mantenibles.';
-  texto4 = '¡Explora mis proyectos y descubre cómo Angular puede transformar tus ideas en aplicaciones web dinámicas y eficientes!';
 
 
   constructor(private modal: ModalOverlayService) { }

@@ -4,63 +4,62 @@
   </button>
 
   <swiper-container id="swiperRef" init="false" class="mySwiper w-full relative z-0 h-full">
+    @for (item of conocimientos; track $index) {
+    @if (activar) {
+
     <swiper-slide>
       <div class="relative ">
-        <!-- Imagen de fondo -->
+        <img src="{{item.imagen}}" alt="ngrx" class="w-full h-[400px] object-cover rounded-lg" />
+        <!-- Texto arriba a la derecha, dentro de la imagen -->
+        @if(item.habilitarTexto){
+
+        <div style="text-shadow: 2px 2px 0 #fa769c, -2px -2px 0 #fa769c;"
+          class="absolute top-4 right-1/4 text-black size-40 font-bold flex flex-col items-center space-y-2">
+          <p class="text-3xl md:text-4xl lg:text-5xl text-[#100058]">{{item.texto}}</p>
+        </div>
+        }
+
+        <!-- Botón abajo a la izquierda, dentro de la imagen -->
+        <p-button class="absolute bottom-4 right-4 px-4 py-2 rounded" [disabled]="item.disable" (click)="navigateTo(item)">
+          {{item.nombre}}
+        </p-button>
+      </div>
+    </swiper-slide>
+    }
+    }
+    <!-- <swiper-slide>
+      <div class="relative ">
         <img src="assets/rxjs.jpg" alt="rxjs" class="w-full h-[400px] object-cover rounded-lg" />
-
-        <!-- Textos a la derecha, encima de la imagen -->
-        <!-- <div class="absolute top-4 right-4 text-white flex flex-col items-end space-y-2">
-          <p class="text-sm">Texto 1</p>
-          <p class="text-sm">Texto 2</p>
-          <p class="text-sm">Texto 3</p>
-        </div> -->
-
-        <!-- Botón abajo a la izquierda, dentro de la imagen -->
         <p-button class="absolute bottom-4 right-4 px-4 py-2 rounded">
-          Mira el contenido...
+          {{conocimientos}}
         </p-button>
       </div>
     </swiper-slide>
+
     <swiper-slide>
       <div class="relative ">
-        <!-- Imagen de fondo -->
         <img src="assets/ngrx.jpg" alt="ngrx" class="w-full h-[400px] object-cover rounded-lg" />
-
-        <!-- Textos a la derecha, encima de la imagen -->
-        <!-- <div class="absolute top-4 right-4 text-white flex flex-col items-end space-y-2">
-          <p class="text-sm">Texto 1</p>
-          <p class="text-sm">Texto 2</p>
-          <p class="text-sm">Texto 3</p>
-        </div> -->
-
-        <!-- Botón abajo a la izquierda, dentro de la imagen -->
         <p-button class="absolute bottom-4 right-4 px-4 py-2 rounded">
           Mira el contenido...
         </p-button>
       </div>
-    </swiper-slide>
+    </swiper-slide> -->
 
-    <swiper-slide>
+    <!-- <swiper-slide>
       <div class="relative ">
-        <!-- Imagen de fondo -->
         <img src="assets/formularios.jpg" alt="ngrx" class="w-full h-[400px] object-cover rounded-lg" />
-
-        <!-- Textos a la derecha, encima de la imagen -->
+        
         <div style="text-shadow: 2px 2px 0 #fa769c, -2px -2px 0 #fa769c;" class="absolute top-4 right-1/4 text-black size-40 font-bold flex flex-col items-center space-y-2">
           <p class="text-3xl md:text-4xl lg:text-5xl text-[#100058]">Formularios reactivos</p>
         </div>
 
-        <!-- Botón abajo a la izquierda, dentro de la imagen -->
+        
         <p-button class="absolute bottom-4 right-4 px-4 py-2 rounded">
           Mira el contenido...
         </p-button>
       </div>
-    </swiper-slide>
-    <!-- <swiper-slide><img src="assets/formApp.png" alt=""></swiper-slide>
-      <swiper-slide><img src="assets/gifsApp.png" alt=""></swiper-slide>
-      <swiper-slide><img src="assets/filtroPipe.png" alt=""></swiper-slide>
-      <swiper-slide><img src="assets/formApp.png" alt=""></swiper-slide> -->
+    </swiper-slide> -->
+
   </swiper-container>
 
   <button id="next" class="px-2 relative z-10">

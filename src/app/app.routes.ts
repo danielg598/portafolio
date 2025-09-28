@@ -11,6 +11,9 @@ import { CsharpComponent } from './components/shared/perfil/utilities/csharp/csh
 import { AngularComponent } from './components/shared/perfil/utilities/angular/angular.component';
 import { FlutterComponent } from './components/shared/perfil/utilities/flutter/flutter.component';
 import { ContactoComponent } from './components/shared/contacto/contacto.component';
+import { RxjsComponent } from './components/shared/conocimientos/rxjs/rxjs.component';
+import { NgrxComponent } from './components/shared/conocimientos/ngrx/ngrx.component';
+import { FormulariosComponent } from './components/shared/conocimientos/formularios/formularios.component';
 
 export const routes: Routes = [
     {
@@ -18,6 +21,18 @@ export const routes: Routes = [
         // component: PerfilComponent
         loadChildren: () =>
             import('../app/components/shared/perfil/perfil.routes').then(m => m.perfilRoutes)
+    },
+    {
+        path:'rxjs',
+        component: RxjsComponent
+    },
+    {
+        path:'ngrx',
+        component: NgrxComponent
+    },
+    {
+        path:'formularios',
+        component: FormulariosComponent
     },
     {
         path:'pasteur',
